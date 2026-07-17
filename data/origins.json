@@ -1,0 +1,44 @@
+{
+  "origins": [
+    {
+      "name": "Tav",
+      "fixedRace": null,
+      "fixedClass": null
+    },
+    {
+      "name": "Dark Urge",
+      "fixedRace": null,
+      "fixedClass": null
+    },
+    {
+      "name": "Astarion",
+      "fixedRace": "Hochelf",
+      "fixedClass": "Schurke"
+    },
+    {
+      "name": "Shadowheart",
+      "fixedRace": "Halbelf",
+      "fixedClass": "Kleriker"
+    },
+    {
+      "name": "Gale",
+      "fixedRace": "Mensch",
+      "fixedClass": "Magier"
+    },
+    {
+      "name": "Wyll",
+      "fixedRace": "Mensch",
+      "fixedClass": "Hexenmeister"
+    },
+    {
+      "name": "Karlach",
+      "fixedRace": "Zariel-Tiefling",
+      "fixedClass": "Barbar"
+    },
+    {
+      "name": "Lae'zel",
+      "fixedRace": "Githyanki",
+      "fixedClass": "Kämpfer"
+    }
+  ]
+}
