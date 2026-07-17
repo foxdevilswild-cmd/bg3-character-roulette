@@ -1,0 +1,21 @@
+{
+  "players": 2,
+  "guardian": true,
+  "randomRace": true,
+  "randomSubrace": true,
+  "randomClass": true,
+  "randomSubclass": true,
+  "randomBackground": true,
+  "randomGender": true,
+  "randomBodyType": true,
+  "randomVoice": true,
+  "randomFace": true,
+  "randomHair": true,
+  "randomHairColor": true,
+  "randomEyeColor": true,
+  "randomSkinColor": true,
+  "randomTattoo": true,
+  "randomScar": true,
+  "randomMakeup": true,
+  "randomPiercing": true
+}
