@@ -1,123 +1,405 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>BG3 Character Roulette</title>
-
- 
 
     <link rel="stylesheet" href="style.css">
 
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
- 
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
 
 <body>
 
- 
+<div class="background-overlay"></div>
 
-<header>
+<header class="hero">
 
- 
+    <div class="hero-content">
 
-    <h1>Baldur's Gate 3</h1>
+        <p class="version">
+            Version 0.2 Alpha
+        </p>
 
-    <h2>Character Roulette</h2>
+        <h1>
+            Baldur's Gate III
+        </h1>
 
- 
+        <h2>
+            Character Roulette
+        </h2>
 
-    <button id="rollButton">
+        <p class="subtitle">
+            Würfle einen komplett zufälligen Charakter
+            für deinen nächsten Durchlauf.
+        </p>
 
-        🎲 Charakter würfeln
+        <button id="rollButton">
+            🎲 Charakter würfeln
+        </button>
 
-    </button>
-
- 
+    </div>
 
 </header>
 
- 
 
-<main>
+<main class="container">
 
- 
 
-<section class="player">
+<section class="players-grid">
 
- 
 
-<h3>Spieler 1</h3>
+<article class="character-card">
 
- 
+<div class="card-header">
 
-<p><strong>Rasse:</strong> <span id="race1">-</span></p>
+<h3>
+Spieler 1
+</h3>
 
-<p><strong>Klasse:</strong> <span id="class1">-</span></p>
+<span class="badge">
+Tav
+</span>
 
-<p><strong>Geschlecht:</strong> <span id="gender1">-</span></p>
+</div>
 
- 
+
+<div class="card-body">
+
+<div class="attribute">
+
+<span class="label">
+Rasse
+</span>
+
+<span class="value" id="race1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Unterrasse
+</span>
+
+<span class="value" id="subrace1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Klasse
+</span>
+
+<span class="value" id="class1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Unterklasse
+</span>
+
+<span class="value" id="subclass1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Hintergrund
+</span>
+
+<span class="value" id="background1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Geschlecht
+</span>
+
+<span class="value" id="gender1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Körpertyp
+</span>
+
+<span class="value" id="bodytype1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Stimme
+</span>
+
+<span class="value" id="voice1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Gesicht
+</span>
+
+<span class="value" id="face1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Frisur
+</span>
+
+<span class="value" id="hair1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Haarfarbe
+</span>
+
+<span class="value" id="hairColor1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Augenfarbe
+</span>
+
+<span class="value" id="eyeColor1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Hautfarbe
+</span>
+
+<span class="value" id="skinColor1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Tattoo
+</span>
+
+<span class="value" id="tattoo1">
+-
+</span>
+
+</div>
+
+<div class="attribute">
+
+<span class="label">
+Narben
+</span>
+
+<span class="value" id="scar1">
+-
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+
+
+<article class="character-card">
+
+<div class="card-header">
+
+<h3>
+Spieler 2
+</h3>
+
+<span class="badge">
+Tav
+</span>
+
+</div>
+
+<div class="card-body">
+
+<div class="attribute"><span class="label">Rasse</span><span class="value" id="race2">-</span></div>
+
+<div class="attribute"><span class="label">Unterrasse</span><span class="value" id="subrace2">-</span></div>
+
+<div class="attribute"><span class="label">Klasse</span><span class="value" id="class2">-</span></div>
+
+<div class="attribute"><span class="label">Unterklasse</span><span class="value" id="subclass2">-</span></div>
+
+<div class="attribute"><span class="label">Hintergrund</span><span class="value" id="background2">-</span></div>
+
+<div class="attribute"><span class="label">Geschlecht</span><span class="value" id="gender2">-</span></div>
+
+<div class="attribute"><span class="label">Körpertyp</span><span class="value" id="bodytype2">-</span></div>
+
+<div class="attribute"><span class="label">Stimme</span><span class="value" id="voice2">-</span></div>
+
+<div class="attribute"><span class="label">Gesicht</span><span class="value" id="face2">-</span></div>
+
+<div class="attribute"><span class="label">Frisur</span><span class="value" id="hair2">-</span></div>
+
+<div class="attribute"><span class="label">Haarfarbe</span><span class="value" id="hairColor2">-</span></div>
+
+<div class="attribute"><span class="label">Augenfarbe</span><span class="value" id="eyeColor2">-</span></div>
+
+<div class="attribute"><span class="label">Hautfarbe</span><span class="value" id="skinColor2">-</span></div>
+
+<div class="attribute"><span class="label">Tattoo</span><span class="value" id="tattoo2">-</span></div>
+
+<div class="attribute"><span class="label">Narben</span><span class="value" id="scar2">-</span></div>
+
+</div>
+
+</article>
+
 
 </section>
 
- 
 
- 
 
-<section class="player">
+<section class="guardian-section">
 
- 
+<div class="section-title">
 
-<h3>Spieler 2</h3>
+<h2>
+Guardian
+</h2>
 
- 
+</div>
 
-<p><strong>Rasse:</strong> <span id="race2">-</span></p>
 
-<p><strong>Klasse:</strong> <span id="class2">-</span></p>
+<div class="guardian-card">
 
-<p><strong>Geschlecht:</strong> <span id="gender2">-</span></p>
+<div class="attribute"><span class="label">Rasse</span><span class="value" id="guardianRace">-</span></div>
 
- 
+<div class="attribute"><span class="label">Geschlecht</span><span class="value" id="guardianGender">-</span></div>
 
-</section>
+<div class="attribute"><span class="label">Körpertyp</span><span class="value" id="guardianBody">-</span></div>
 
- 
+<div class="attribute"><span class="label">Stimme</span><span class="value" id="guardianVoice">-</span></div>
 
- 
+<div class="attribute"><span class="label">Gesicht</span><span class="value" id="guardianFace">-</span></div>
 
-<section class="guardian">
+<div class="attribute"><span class="label">Frisur</span><span class="value" id="guardianHair">-</span></div>
 
- 
+<div class="attribute"><span class="label">Haarfarbe</span><span class="value" id="guardianHairColor">-</span></div>
 
-<h3>Guardian</h3>
+<div class="attribute"><span class="label">Augenfarbe</span><span class="value" id="guardianEyeColor">-</span></div>
 
- 
+<div class="attribute"><span class="label">Hautfarbe</span><span class="value" id="guardianSkinColor">-</span></div>
 
-<p><strong>Rasse:</strong> <span id="guardianRace">-</span></p>
-
-<p><strong>Geschlecht:</strong> <span id="guardianGender">-</span></p>
-
- 
+</div>
 
 </section>
 
- 
+
+
+<section class="future-section">
+
+<div class="future-card">
+
+<h2>
+Geplante Inhalte
+</h2>
+
+<ul>
+
+<li>✔ Alle Rassen & Unterrassen</li>
+
+<li>✔ Alle Klassen & Unterklassen</li>
+
+<li>✔ Vollständiger Charaktereditor</li>
+
+<li>✔ Guardian-Roulette</li>
+
+<li>✔ Romanzen</li>
+
+<li>✔ Challenges</li>
+
+<li>✔ Chaosmodus</li>
+
+<li>✔ Hardcoremodus</li>
+
+<li>✔ Charakterbogen</li>
+
+<li>✔ Export als PDF</li>
+
+</ul>
+
+</div>
+
+</section>
 
 </main>
 
- 
+
+
+<footer>
+
+<p>
+BG3 Character Roulette · Fanprojekt · Nicht mit Larian Studios verbunden
+</p>
+
+</footer>
+
 
 <script src="script.js"></script>
 
- 
-
 </body>
-
 </html>
