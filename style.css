@@ -1,163 +1,494 @@
-body{
+/* =========================================================
+   BG3 CHARACTER ROULETTE
+   Version 0.2
+   Teil 1 von 3
+========================================================= */
 
- 
+:root{
 
-background:#151515;
-
- 
-
-color:#f0e6c0;
-
- 
-
-font-family:Georgia,serif;
-
- 
-
-margin:0;
-
- 
-
-padding:40px;
-
- 
+--bg:#131313;
+--panel:#211d19;
+--panel-light:#2b2621;
+--gold:#c6a55b;
+--gold-light:#e5d3a0;
+--text:#f4ead2;
+--text-dark:#d7c39a;
+--border:#5d4a22;
+--shadow:rgba(0,0,0,.45);
 
 }
 
- 
+*{
 
-header{
+margin:0;
+padding:0;
+box-sizing:border-box;
 
- 
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:
+linear-gradient(rgba(10,10,10,.75),rgba(10,10,10,.88)),
+url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:var(--text);
+
+font-family:"EB Garamond",serif;
+
+min-height:100vh;
+
+}
+
+.background-overlay{
+
+position:fixed;
+
+left:0;
+top:0;
+right:0;
+bottom:0;
+
+background:rgba(0,0,0,.35);
+
+z-index:-1;
+
+}
+
+.container{
+
+width:min(1400px,95%);
+
+margin:auto;
+
+padding:40px 0 80px;
+
+}
+
+.hero{
 
 text-align:center;
 
- 
+padding:80px 20px 60px;
 
-margin-bottom:50px;
+border-bottom:1px solid var(--border);
 
- 
+background:
 
-}
+linear-gradient(
 
- 
+180deg,
 
-h1{
+rgba(25,25,25,.80),
 
- 
+rgba(15,15,15,.60)
 
-font-size:48px;
+);
 
- 
-
-color:#d4af37;
-
- 
-
-margin-bottom:0;
-
- 
+backdrop-filter:blur(3px);
 
 }
 
- 
+.version{
 
-h2{
+font-family:"Cinzel",serif;
 
- 
+letter-spacing:3px;
 
-font-weight:normal;
+font-size:.8rem;
 
- 
+color:var(--gold-light);
 
-margin-top:10px;
+margin-bottom:15px;
 
- 
-
-color:#c8b27d;
-
- 
+text-transform:uppercase;
 
 }
 
- 
+.hero h1{
 
-button{
+font-family:"Cinzel",serif;
 
- 
+font-size:3.6rem;
 
-background:#7d5b20;
+color:var(--gold);
 
- 
+letter-spacing:3px;
 
-color:white;
+margin-bottom:10px;
 
- 
+text-shadow:
 
-padding:15px 30px;
-
- 
-
-font-size:20px;
-
- 
-
-border:none;
-
- 
-
-border-radius:8px;
-
- 
-
-cursor:pointer;
-
- 
-
-margin-top:30px;
-
- 
+0 0 10px rgba(198,165,91,.35);
 
 }
 
- 
+.hero h2{
 
-button:hover{
+font-family:"Cinzel",serif;
 
- 
+font-size:1.8rem;
 
-background:#a07a2d;
+font-weight:400;
 
- 
-
-}
-
- 
-
-.player,
-
-.guardian{
-
- 
-
-background:#222;
-
- 
-
-padding:20px;
-
- 
-
-border:2px solid #6f5b2d;
-
- 
-
-border-radius:10px;
-
- 
+color:var(--gold-light);
 
 margin-bottom:25px;
 
- 
+}
+
+.subtitle{
+
+max-width:650px;
+
+margin:auto;
+
+font-size:1.2rem;
+
+line-height:1.6;
+
+color:var(--text-dark);
+
+margin-bottom:35px;
+
+}
+
+#rollButton{
+
+font-family:"Cinzel",serif;
+
+font-size:1.1rem;
+
+letter-spacing:1px;
+
+padding:16px 42px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#8b6d32,
+
+#6d5322
+
+);
+
+border:1px solid var(--gold);
+
+color:white;
+
+cursor:pointer;
+
+border-radius:8px;
+
+transition:.25s;
+
+box-shadow:
+
+0 8px 25px rgba(0,0,0,.45);
+
+}
+
+#rollButton:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 12px 30px rgba(198,165,91,.30);
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#9d7a36,
+
+#7a5d24
+
+);
+
+}/* =========================================================
+   SPIELERKARTEN
+========================================================= */
+
+.players-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+gap:30px;
+
+margin-top:30px;
+
+}
+
+.character-card,
+.guardian-card,
+.future-card{
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(43,38,33,.95),
+
+rgba(28,24,21,.95)
+
+);
+
+border:1px solid var(--border);
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 20px 45px var(--shadow);
+
+transition:.25s;
+
+}
+
+.character-card:hover,
+.guardian-card:hover,
+.future-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--gold);
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.55);
+
+}
+
+.card-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 25px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(198,165,91,.15),
+
+rgba(198,165,91,.05)
+
+);
+
+border-bottom:1px solid var(--border);
+
+}
+
+.card-header h3{
+
+font-family:"Cinzel",serif;
+
+font-size:1.45rem;
+
+color:var(--gold);
+
+letter-spacing:1px;
+
+}
+
+.badge{
+
+background:var(--gold);
+
+color:#181818;
+
+font-family:"Cinzel",serif;
+
+font-size:.75rem;
+
+font-weight:bold;
+
+padding:6px 12px;
+
+border-radius:30px;
+
+}
+
+.card-body{
+
+padding:24px;
+
+}
+
+.attribute{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:12px 0;
+
+border-bottom:1px solid rgba(255,255,255,.06);
+
+gap:20px;
+
+}
+
+.attribute:last-child{
+
+border-bottom:none;
+
+}
+
+.label{
+
+font-weight:600;
+
+font-size:1rem;
+
+color:var(--gold-light);
+
+}
+
+.value{
+
+font-size:1.05rem;
+
+font-weight:600;
+
+text-align:right;
+
+color:var(--text);
+
+}
+
+
+
+/* =========================================================
+   GUARDIAN
+========================================================= */
+
+.guardian-section{
+
+margin-top:50px;
+
+}
+
+.section-title{
+
+margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+font-family:"Cinzel",serif;
+
+font-size:2rem;
+
+text-align:center;
+
+color:var(--gold);
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+}
+
+.guardian-card{
+
+padding:25px;
+
+}
+
+
+
+/* =========================================================
+   ZUKÜNFTIGE FEATURES
+========================================================= */
+
+.future-section{
+
+margin-top:50px;
+
+}
+
+.future-card{
+
+padding:30px;
+
+}
+
+.future-card h2{
+
+font-family:"Cinzel",serif;
+
+color:var(--gold);
+
+font-size:1.8rem;
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+
+.future-card ul{
+
+list-style:none;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:14px;
+
+}
+
+.future-card li{
+
+padding:14px 18px;
+
+background:rgba(255,255,255,.04);
+
+border-left:4px solid var(--gold);
+
+border-radius:6px;
+
+transition:.2s;
+
+}
+
+.future-card li:hover{
+
+background:rgba(198,165,91,.12);
+
+transform:translateX(6px);
 
 }
