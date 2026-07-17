@@ -1,0 +1,65 @@
+{
+  "appearance": {
+    "genders": [
+      "Männlich",
+      "Weiblich"
+    ],
+    "bodyTypes": [
+      "Körpertyp 1",
+      "Körpertyp 2"
+    ],
+    "hairColors": [
+      "Schwarz",
+      "Dunkelbraun",
+      "Braun",
+      "Hellbraun",
+      "Blond",
+      "Platinblond",
+      "Rot",
+      "Kupfer",
+      "Weiß",
+      "Silber",
+      "Grau",
+      "Schwarz mit weißen Strähnen"
+    ],
+    "eyeColors": [
+      "Braun",
+      "Hellbraun",
+      "Blau",
+      "Hellblau",
+      "Grün",
+      "Bernstein",
+      "Gold",
+      "Silber",
+      "Grau",
+      "Violett",
+      "Rot",
+      "Schwarz"
+    ],
+    "skinTones": [
+      "Sehr hell",
+      "Hell",
+      "Hell gebräunt",
+      "Gebräunt",
+      "Oliv",
+      "Dunkel",
+      "Sehr dunkel"
+    ],
+    "tattoos": [
+      "Kein Tattoo",
+      "Zufällig"
+    ],
+    "scars": [
+      "Keine",
+      "Zufällig"
+    ],
+    "makeup": [
+      "Keines",
+      "Zufällig"
+    ],
+    "piercings": [
+      "Keine",
+      "Zufällig"
+    ]
+  }
+}
