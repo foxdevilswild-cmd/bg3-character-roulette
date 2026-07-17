@@ -1,0 +1,56 @@
+{
+  "backgrounds": [
+    {
+      "name": "Akolyth",
+      "description": "Diente einem Tempel oder einer Gottheit."
+    },
+    {
+      "name": "Adlige:r",
+      "description": "Stammt aus einer angesehenen Familie."
+    },
+    {
+      "name": "Scharlatan:in",
+      "description": "Lebte von Betrug, Täuschung und Manipulation."
+    },
+    {
+      "name": "Kriminelle:r",
+      "description": "Kennt die Unterwelt und ihre Regeln."
+    },
+    {
+      "name": "Unterhalter:in",
+      "description": "Begeisterte andere mit Kunst und Auftritten."
+    },
+    {
+      "name": "Volksheld:in",
+      "description": "Stand einfachen Menschen in schwierigen Zeiten bei."
+    },
+    {
+      "name": "Gildenhandwerker:in",
+      "description": "Erlernte ein Handwerk in einer Zunft."
+    },
+    {
+      "name": "Einsiedler:in",
+      "description": "Lebte lange Zeit abgeschieden."
+    },
+    {
+      "name": "Ausgestoßene:r",
+      "description": "Musste fernab der Gesellschaft überleben."
+    },
+    {
+      "name": "Weise:r",
+      "description": "Suchte nach Wissen und uralten Geheimnissen."
+    },
+    {
+      "name": "Seefahrer:in",
+      "description": "Bereiste Meere und fremde Küsten."
+    },
+    {
+      "name": "Soldat:in",
+      "description": "Diente in einer Armee oder Miliz."
+    },
+    {
+      "name": "Urchin (Straßenkind)",
+      "description": "Überlebte auf den Straßen einer Stadt."
+    }
+  ]
+}
