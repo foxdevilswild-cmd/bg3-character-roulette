@@ -3,11 +3,13 @@
     {
       "name": "Mensch",
       "subraces": [
-        "Standard"
+        "Keine"
       ],
       "bodyTypes": [
-        "Schlank",
-        "Kräftig"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
@@ -17,19 +19,23 @@
         "Waldelf"
       ],
       "bodyTypes": [
-        "Schlank",
-        "Kräftig"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
       "name": "Drow",
       "subraces": [
         "Lolth-Verehrer",
-        "Seldarine"
+        "Seldarine-Drow"
       ],
       "bodyTypes": [
-        "Schlank",
-        "Kräftig"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
@@ -40,8 +46,10 @@
         "Drow"
       ],
       "bodyTypes": [
-        "Schlank",
-        "Kräftig"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
@@ -52,17 +60,21 @@
         "Duergar"
       ],
       "bodyTypes": [
-        "Kräftig"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
       "name": "Halbling",
       "subraces": [
         "Leichtfuß",
-        "Kräftig"
+        "Starkherz"
       ],
       "bodyTypes": [
-        "Schlank"
+        "1",
+        "2"
       ]
     },
     {
@@ -73,7 +85,8 @@
         "Tiefengnom"
       ],
       "bodyTypes": [
-        "Schlank"
+        "1",
+        "2"
       ]
     },
     {
@@ -84,26 +97,22 @@
         "Zariel"
       ],
       "bodyTypes": [
-        "Schlank",
-        "Kräftig"
-      ]
-    },
-    {
-      "name": "Halbork",
-      "subraces": [
-        "Standard"
-      ],
-      "bodyTypes": [
-        "Kräftig"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
       "name": "Githyanki",
       "subraces": [
-        "Standard"
+        "Keine"
       ],
       "bodyTypes": [
-        "Schlank"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
@@ -121,8 +130,20 @@
         "Weiß"
       ],
       "bodyTypes": [
-        "Schlank",
-        "Kräftig"
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "Halbork",
+      "subraces": [
+        "Keine"
+      ],
+      "bodyTypes": [
+        "3",
+        "4"
       ]
     }
   ]
