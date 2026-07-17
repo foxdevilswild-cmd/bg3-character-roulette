@@ -1,14 +1,24 @@
 /*
 ==========================================================
 BG3 CHARACTER ROULETTE
-Version 0.3
+Version 1.0
+Teil 1
+NICHT EINFÜGEN
+Warten bis ich "ENDE SCRIPT.JS" schreibe.
 ==========================================================
 */
 
-
 const DATA = {};
 
+const CONFIG = {
 
+    players:2,
+
+    animationSpeed:60,
+
+    animationSteps:10
+
+};
 
 async function loadJSON(file){
 
@@ -23,8 +33,6 @@ async function loadJSON(file){
     return await response.json();
 
 }
-
-
 
 async function loadAllData(){
 
@@ -42,26 +50,22 @@ async function loadAllData(){
 
     DATA.hairstyles = await loadJSON("data/hairstyles.json");
 
-    DATA.horns = await loadJSON("data/horns.json");
-
-    DATA.tails = await loadJSON("data/tails.json");
-
     DATA.features = await loadJSON("data/raceFeatures.json");
-    
-    DATA.settings = await loadJSON("data/settings.json");
+
+    DATA.origins = await loadJSON("data/origins.json");
+
+    DATA.romances = await loadJSON("data/romances.json");
+
+    DATA.deities = await loadJSON("data/deities.json");
 
 }
-function random(list){
 
-    return list[Math.floor(Math.random()*list.length)];
+function random(array){
 
-}
-
-function enabled(setting){
-
-    return DATA.settings[setting];
+    return array[Math.floor(Math.random()*array.length)];
 
 }
+
 function set(id,value){
 
     const element=document.getElementById(id);
@@ -73,13 +77,18 @@ function set(id,value){
     }
 
 }
+
+function getRaceFeatures(raceName){
+
+    return DATA.features[raceName] || {};
+
+}
+
 function getRandomRace(){
 
     return random(DATA.races.races);
 
 }
-
-
 
 function getRandomClass(){
 
@@ -87,202 +96,171 @@ function getRandomClass(){
 
 }
 
-
-
 function getRandomBackground(){
-    function getRaceFeatures(raceName){
-
-    return DATA.features[raceName];
-
-}
-    function randomAppearance(race){
-
-    const appearance = {};
-
-    const features = getRaceFeatures(race.name);
-
-    appearance.gender = enabled("randomGender")
-    ? random(DATA.appearance.appearance.genders)
-    : "Manuell";
-
-    appearance.bodyType = random(race.bodyTypes);
-
-    appearance.skin = random(DATA.appearance.appearance.skinTones);
-
-    appearance.eye = random(DATA.appearance.appearance.eyeColors);
-
-    appearance.hairColor = random(DATA.appearance.appearance.hairColors);
-
-    appearance.voice = random(DATA.voices.voices);
-
-    appearance.face = "Zufällig";
-
-    appearance.hair = "Zufällig";
-
-    appearance.tattoo = random(DATA.appearance.appearance.tattoos);
-
-    appearance.scar = random(DATA.appearance.appearance.scars);
-
-    appearance.makeup = random(DATA.appearance.appearance.makeup);
-
-    appearance.piercing = random(DATA.appearance.appearance.piercings);
-
-
-
-    if(features.beard){
-
-        appearance.beard="Zufällig";
-
-    }else{
-
-        appearance.beard="-";
-
-    }
-
-
-
-    if(features.horns){
-
-        appearance.horns=random(DATA.horns.hornStyles);
-
-    }else{
-
-        appearance.horns="-";
-
-    }
-
-
-
-    if(features.tail){
-
-        appearance.tail=random(DATA.tails.dragonbornTails);
-
-    }else{
-
-        appearance.tail="-";
-
-    }
-
-
-
-    return appearance;
-
-}
 
     return random(DATA.backgrounds.backgrounds);
 
 }
-function createCharacter(){
 
-    return {
+function getRandomOrigin(){
 
-        race:null,
-        subrace:null,
+    return random(DATA.origins.origins);
 
-        class:null,
-        subclass:null,
+}
 
-        background:null,
+function getRandomRomance(){
 
-        appearance:{}
+    return random(DATA.romances.romances);
+
+}
+
+function getRandomDeity(){
+
+    return random(DATA.deities.deities);
+
+}function randomAppearance(race){
+
+    const features = getRaceFeatures(race.name);
+
+    return{
+
+        gender:random(DATA.appearance.appearance.genders),
+
+        bodyType:random(race.bodyTypes),
+
+        voice:random(DATA.voices.voices),
+
+        face:random(DATA.faces.faces),
+
+        hair:random(DATA.hairstyles.hairstyles),
+
+        hairColor:random(DATA.appearance.appearance.hairColors),
+
+        eyeColor:random(DATA.appearance.appearance.eyeColors),
+
+        skinColor:random(DATA.appearance.appearance.skinTones),
+
+        tattoo:random(DATA.appearance.appearance.tattoos),
+
+        scar:random(DATA.appearance.appearance.scars),
+
+        piercing:random(DATA.appearance.appearance.piercings),
+
+        makeup:random(DATA.appearance.appearance.makeup),
+
+        horns:features.horns
+            ? random(DATA.appearance.horns)
+            : "—",
+
+        tail:features.tail
+            ? random(DATA.appearance.tails)
+            : "—"
 
     };
 
 }
+
+function createCharacter(){
+
+    return{
+
+        origin:null,
+
+        race:null,
+
+        subrace:null,
+
+        playerClass:null,
+
+        subclass:null,
+
+        background:null,
+
+        deity:"—",
+
+        romance:null,
+
+        appearance:null
+
+    };
+
+}
+
 function generatePlayer(number){
 
-    const character = createCharacter();
-    
-    const race = getRandomRace();
+    const character=createCharacter();
 
-    const playerClass = getRandomClass();
+    character.origin=getRandomOrigin();
 
-    const background = getRandomBackground();
+    character.race=getRandomRace();
 
-    const appearance = randomAppearance(race);
+    character.subrace=random(character.race.subraces);
 
+    character.playerClass=getRandomClass();
 
+    character.subclass=random(character.playerClass.subclasses);
 
-    set("race"+number,race.name);
+    character.background=getRandomBackground();
 
-    const subrace = random(race.subraces);
+    character.romance=getRandomRomance();
 
-set("subrace"+number, subrace);
+    character.appearance=randomAppearance(character.race);
 
+    if(character.playerClass.name==="Kleriker"){
 
+        character.deity=getRandomDeity();
 
-    set("class"+number,playerClass.name);
+    }
 
-    const subclass = random(playerClass.subclasses);
+    set("origin"+number,character.origin.name);
 
-set("subclass"+number, subclass);
+    set("race"+number,character.race.name);
 
+    set("subrace"+number,character.subrace);
 
+    set("class"+number,character.playerClass.name);
 
-    set("background"+number,background.name);
+    set("subclass"+number,character.subclass);
 
+    set("background"+number,character.background.name);
 
+    set("deity"+number,character.deity);
 
-    set("gender"+number,appearance.gender);
+    set("gender"+number,character.appearance.gender);
 
-    set("bodytype"+number,appearance.bodyType);
+    set("bodytype"+number,character.appearance.bodyType);
 
-    set("voice"+number,appearance.voice);
+    set("voice"+number,character.appearance.voice);
 
-    set("face"+number,appearance.face);
+    set("face"+number,character.appearance.face);
 
-    set("hair"+number,appearance.hair);
+    set("hair"+number,character.appearance.hair);
 
-    set("hairColor"+number,appearance.hairColor);
+    set("hairColor"+number,character.appearance.hairColor);
 
-    set("eyeColor"+number,appearance.eye);
+    set("eyeColor"+number,character.appearance.eyeColor);
 
-    set("skinColor"+number,appearance.skin);
+    set("skinColor"+number,character.appearance.skinColor);
 
-    set("tattoo"+number,appearance.tattoo);
+    set("tattoo"+number,character.appearance.tattoo);
 
-    set("scar"+number,appearance.scar);
+    set("scar"+number,character.appearance.scar);
 
-}
+    set("piercing"+number,character.appearance.piercing);
 
-function generateGuardian(){
+    set("makeup"+number,character.appearance.makeup);
 
-    const race=getRandomRace();
+    set("romance"+number,character.romance);
 
+}function roll(){
 
+    for(let i=1;i<=CONFIG.players;i++){
 
-    set("guardianRace",race.name);
+        generatePlayer(i);
 
-    set("guardianGender",random(DATA.appearance.appearance.genders));
-
-    set("guardianBody",random(DATA.appearance.appearance.bodyTypes));
-
-}
-function roll(){
-
-    for(let i=1;i<=DATA.settings.players;i++){
-
-    generatePlayer(i);
-
-}
-
-    generateGuardian();
+    }
 
 }
-async function init(){
-
-    await loadAllData();
-
-    animateRoll();
-
-}
-document
-.getElementById("rollButton")
-.addEventListener("click",roll);
-
-
-
-init();
 
 function animateRoll(){
 
@@ -292,15 +270,15 @@ function animateRoll(){
 
     const interval=setInterval(()=>{
 
-        values.forEach(v=>{
+        values.forEach(value=>{
 
-            v.textContent="🎲";
+            value.textContent="🎲";
 
         });
 
         counter++;
 
-        if(counter>8){
+        if(counter>=CONFIG.animationSteps){
 
             clearInterval(interval);
 
@@ -308,6 +286,101 @@ function animateRoll(){
 
         }
 
-    },60);
+    },CONFIG.animationSpeed);
 
 }
+
+function bindEvents(){
+
+    const button=document.getElementById("rollButton");
+
+    button.addEventListener("click",()=>{
+
+        button.disabled=true;
+
+        animateRoll();
+
+        setTimeout(()=>{
+
+            button.disabled=false;
+
+        },CONFIG.animationSteps*CONFIG.animationSpeed+100);
+
+    });
+
+}
+
+function validateData(){
+
+    console.log("===== BG3 Character Roulette =====");
+
+    console.log(DATA);
+
+    if(!DATA.races){
+
+        throw new Error("races.json wurde nicht geladen.");
+
+    }
+
+    if(!DATA.classes){
+
+        throw new Error("classes.json wurde nicht geladen.");
+
+    }
+
+    if(!DATA.backgrounds){
+
+        throw new Error("backgrounds.json wurde nicht geladen.");
+
+    }
+
+    if(!DATA.appearance){
+
+        throw new Error("appearance.json wurde nicht geladen.");
+
+    }
+
+    if(!DATA.origins){
+
+        throw new Error("origins.json wurde nicht geladen.");
+
+    }
+
+    if(!DATA.romances){
+
+        throw new Error("romances.json wurde nicht geladen.");
+
+    }
+
+}
+
+async function init(){
+
+    try{
+
+        await loadAllData();
+
+        validateData();
+
+        bindEvents();
+
+        roll();
+
+        console.log("Generator erfolgreich gestartet.");
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        alert(
+            "Beim Laden der Daten ist ein Fehler aufgetreten.\n\n"+
+            "Öffne die Konsole (F12), um die genaue Ursache zu sehen."
+        );
+
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded",init);
