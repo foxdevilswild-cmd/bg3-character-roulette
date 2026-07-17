@@ -1,1 +1,313 @@
-const DATA={};async function load(f){return (await fetch('data/'+f)).json()}function rnd(a){return a[Math.floor(Math.random()*a.length)]}async function init(){DATA.races=await load('races.json');DATA.classes=await load('classes.json');DATA.backgrounds=await load('backgrounds.json');document.getElementById('rollButton').onclick=roll;roll()}function roll(){const r=rnd(DATA.races.races),c=rnd(DATA.classes.classes),b=rnd(DATA.backgrounds.backgrounds);output.textContent=`Rasse: ${r.name}\nUnterrasse: ${rnd(r.subraces)}\nKlasse: ${c.name}\nUnterklasse: ${rnd(c.subclasses)}\nHintergrund: ${b.name}`;}init();
+/*
+==========================================================
+BG3 CHARACTER ROULETTE
+Version 0.3
+==========================================================
+*/
+
+
+const DATA = {};
+
+
+
+async function loadJSON(file){
+
+    const response = await fetch(file);
+
+    if(!response.ok){
+
+        throw new Error("Datei konnte nicht geladen werden: " + file);
+
+    }
+
+    return await response.json();
+
+}
+
+
+
+async function loadAllData(){
+
+    DATA.races = await loadJSON("data/races.json");
+
+    DATA.classes = await loadJSON("data/classes.json");
+
+    DATA.backgrounds = await loadJSON("data/backgrounds.json");
+
+    DATA.appearance = await loadJSON("data/appearance.json");
+
+    DATA.voices = await loadJSON("data/voices.json");
+
+    DATA.faces = await loadJSON("data/faces.json");
+
+    DATA.hairstyles = await loadJSON("data/hairstyles.json");
+
+    DATA.horns = await loadJSON("data/horns.json");
+
+    DATA.tails = await loadJSON("data/tails.json");
+
+    DATA.features = await loadJSON("data/raceFeatures.json");
+    
+    DATA.settings = await loadJSON("data/settings.json");
+
+}
+function random(list){
+
+    return list[Math.floor(Math.random()*list.length)];
+
+}
+
+function enabled(setting){
+
+    return DATA.settings[setting];
+
+}
+function set(id,value){
+
+    const element=document.getElementById(id);
+
+    if(element){
+
+        element.textContent=value;
+
+    }
+
+}
+function getRandomRace(){
+
+    return random(DATA.races.races);
+
+}
+
+
+
+function getRandomClass(){
+
+    return random(DATA.classes.classes);
+
+}
+
+
+
+function getRandomBackground(){
+    function getRaceFeatures(raceName){
+
+    return DATA.features[raceName];
+
+}
+    function randomAppearance(race){
+
+    const appearance = {};
+
+    const features = getRaceFeatures(race.name);
+
+    appearance.gender = enabled("randomGender")
+    ? random(DATA.appearance.appearance.genders)
+    : "Manuell";
+
+    appearance.bodyType = random(race.bodyTypes);
+
+    appearance.skin = random(DATA.appearance.appearance.skinTones);
+
+    appearance.eye = random(DATA.appearance.appearance.eyeColors);
+
+    appearance.hairColor = random(DATA.appearance.appearance.hairColors);
+
+    appearance.voice = random(DATA.voices.voices);
+
+    appearance.face = "Zufällig";
+
+    appearance.hair = "Zufällig";
+
+    appearance.tattoo = random(DATA.appearance.appearance.tattoos);
+
+    appearance.scar = random(DATA.appearance.appearance.scars);
+
+    appearance.makeup = random(DATA.appearance.appearance.makeup);
+
+    appearance.piercing = random(DATA.appearance.appearance.piercings);
+
+
+
+    if(features.beard){
+
+        appearance.beard="Zufällig";
+
+    }else{
+
+        appearance.beard="-";
+
+    }
+
+
+
+    if(features.horns){
+
+        appearance.horns=random(DATA.horns.hornStyles);
+
+    }else{
+
+        appearance.horns="-";
+
+    }
+
+
+
+    if(features.tail){
+
+        appearance.tail=random(DATA.tails.dragonbornTails);
+
+    }else{
+
+        appearance.tail="-";
+
+    }
+
+
+
+    return appearance;
+
+}
+
+    return random(DATA.backgrounds.backgrounds);
+
+}
+function createCharacter(){
+
+    return {
+
+        race:null,
+        subrace:null,
+
+        class:null,
+        subclass:null,
+
+        background:null,
+
+        appearance:{}
+
+    };
+
+}
+function generatePlayer(number){
+
+    const character = createCharacter();
+    
+    const race = getRandomRace();
+
+    const playerClass = getRandomClass();
+
+    const background = getRandomBackground();
+
+    const appearance = randomAppearance(race);
+
+
+
+    set("race"+number,race.name);
+
+    const subrace = random(race.subraces);
+
+set("subrace"+number, subrace);
+
+
+
+    set("class"+number,playerClass.name);
+
+    const subclass = random(playerClass.subclasses);
+
+set("subclass"+number, subclass);
+
+
+
+    set("background"+number,background.name);
+
+
+
+    set("gender"+number,appearance.gender);
+
+    set("bodytype"+number,appearance.bodyType);
+
+    set("voice"+number,appearance.voice);
+
+    set("face"+number,appearance.face);
+
+    set("hair"+number,appearance.hair);
+
+    set("hairColor"+number,appearance.hairColor);
+
+    set("eyeColor"+number,appearance.eye);
+
+    set("skinColor"+number,appearance.skin);
+
+    set("tattoo"+number,appearance.tattoo);
+
+    set("scar"+number,appearance.scar);
+
+}
+
+function generateGuardian(){
+
+    const race=getRandomRace();
+
+
+
+    set("guardianRace",race.name);
+
+    set("guardianGender",random(DATA.appearance.appearance.genders));
+
+    set("guardianBody",random(DATA.appearance.appearance.bodyTypes));
+
+}
+function roll(){
+
+    for(let i=1;i<=DATA.settings.players;i++){
+
+    generatePlayer(i);
+
+}
+
+    generateGuardian();
+
+}
+async function init(){
+
+    await loadAllData();
+
+    animateRoll();
+
+}
+document
+.getElementById("rollButton")
+.addEventListener("click",roll);
+
+
+
+init();
+
+function animateRoll(){
+
+    const values=document.querySelectorAll(".value");
+
+    let counter=0;
+
+    const interval=setInterval(()=>{
+
+        values.forEach(v=>{
+
+            v.textContent="🎲";
+
+        });
+
+        counter++;
+
+        if(counter>8){
+
+            clearInterval(interval);
+
+            roll();
+
+        }
+
+    },60);
+
+}

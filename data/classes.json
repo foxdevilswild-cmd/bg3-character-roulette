@@ -1,1 +1,173 @@
-{"classes":[{"name":"Paladin","subclasses":["Schwur der Alten","Schwur der Hingabe"]},{"name":"Kämpfer","subclasses":["Champion","Kampfmeister"]}]}
+{
+  "classes": [
+    {
+      "name": "Barbar",
+      "subclasses": [
+        "Berserker",
+        "Wildherz",
+        "Wilde Magie"
+      ],
+      "primaryAbility": "Stärke",
+      "armor": [
+        "Leicht",
+        "Mittel",
+        "Schilde"
+      ]
+    },
+    {
+      "name": "Barde",
+      "subclasses": [
+        "College des Mutes",
+        "College des Wissens",
+        "College der Schwerter"
+      ],
+      "primaryAbility": "Charisma",
+      "armor": [
+        "Leicht"
+      ]
+    },
+    {
+      "name": "Kleriker",
+      "subclasses": [
+        "Wissensdomäne",
+        "Lebensdomäne",
+        "Lichtdomäne",
+        "Naturdomäne",
+        "Sturmdomäne",
+        "Täuschungsdomäne",
+        "Kriegsdomäne"
+      ],
+      "primaryAbility": "Weisheit",
+      "armor": [
+        "Leicht",
+        "Mittel",
+        "Schwer",
+        "Schilde"
+      ]
+    },
+    {
+      "name": "Druide",
+      "subclasses": [
+        "Kreis des Landes",
+        "Kreis des Mondes",
+        "Kreis der Sporen"
+      ],
+      "primaryAbility": "Weisheit",
+      "armor": [
+        "Leicht",
+        "Mittel",
+        "Schilde"
+      ]
+    },
+    {
+      "name": "Kämpfer",
+      "subclasses": [
+        "Champion",
+        "Kampfmeister",
+        "Eldritch Knight"
+      ],
+      "primaryAbility": "Stärke",
+      "armor": [
+        "Leicht",
+        "Mittel",
+        "Schwer",
+        "Schilde"
+      ]
+    },
+    {
+      "name": "Mönch",
+      "subclasses": [
+        "Weg der offenen Hand",
+        "Weg der vier Elemente",
+        "Weg des Schattens"
+      ],
+      "primaryAbility": "Geschicklichkeit",
+      "armor": [
+        "Keine"
+      ]
+    },
+    {
+      "name": "Paladin",
+      "subclasses": [
+        "Schwur der Hingabe",
+        "Schwur der Alten",
+        "Schwur der Vergeltung",
+        "Schwurbrecher"
+      ],
+      "primaryAbility": "Stärke",
+      "armor": [
+        "Leicht",
+        "Mittel",
+        "Schwer",
+        "Schilde"
+      ]
+    },
+    {
+      "name": "Waldläufer",
+      "subclasses": [
+        "Jäger",
+        "Bestienmeister",
+        "Gloom Stalker"
+      ],
+      "primaryAbility": "Geschicklichkeit",
+      "armor": [
+        "Leicht",
+        "Mittel",
+        "Schilde"
+      ]
+    },
+    {
+      "name": "Schurke",
+      "subclasses": [
+        "Dieb",
+        "Assassine",
+        "Arkaner Betrüger"
+      ],
+      "primaryAbility": "Geschicklichkeit",
+      "armor": [
+        "Leicht"
+      ]
+    },
+    {
+      "name": "Hexenmeister",
+      "subclasses": [
+        "Der Erzteufel",
+        "Der Große Alte",
+        "Der Feenfürst"
+      ],
+      "primaryAbility": "Charisma",
+      "armor": [
+        "Leicht"
+      ]
+    },
+    {
+      "name": "Zauberer",
+      "subclasses": [
+        "Drachenblutlinie",
+        "Wilde Magie",
+        "Sturmmagie"
+      ],
+      "primaryAbility": "Charisma",
+      "armor": [
+        "Keine"
+      ]
+    },
+    {
+      "name": "Magier",
+      "subclasses": [
+        "Hervorrufung",
+        "Illusion",
+        "Beschwörung",
+        "Nekromantie",
+        "Verzauberung",
+        "Transmutation",
+        "Wahrsagerei",
+        "Abjurierung"
+      ],
+      "primaryAbility": "Intelligenz",
+      "armor": [
+        "Keine"
+      ]
+    }
+  ]
+}

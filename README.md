@@ -1,1 +1,2 @@
-# BG3 Character Roulette
+# bg3-character-roulette
+A Baldur's Gate 3 Character Generator
