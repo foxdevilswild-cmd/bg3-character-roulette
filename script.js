@@ -172,8 +172,27 @@ function getRandomBackground(){
     return random(DATA.backgrounds.backgrounds);
 
 }
+function createCharacter(){
+
+    return {
+
+        race:null,
+        subrace:null,
+
+        class:null,
+        subclass:null,
+
+        background:null,
+
+        appearance:{}
+
+    };
+
+}
 function generatePlayer(number){
 
+    const character = createCharacter();
+    
     const race = getRandomRace();
 
     const playerClass = getRandomClass();
@@ -186,13 +205,17 @@ function generatePlayer(number){
 
     set("race"+number,race.name);
 
-    set("subrace"+number,random(race.subraces));
+    const subrace = random(race.subraces);
+
+set("subrace"+number, subrace);
 
 
 
     set("class"+number,playerClass.name);
 
-    set("subclass"+number,random(playerClass.subclasses));
+    const subclass = random(playerClass.subclasses);
+
+set("subclass"+number, subclass);
 
 
 
