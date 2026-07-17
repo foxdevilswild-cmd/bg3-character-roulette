@@ -47,11 +47,19 @@ async function loadAllData(){
     DATA.tails = await loadJSON("data/tails.json");
 
     DATA.features = await loadJSON("data/raceFeatures.json");
+    
+    DATA.settings = await loadJSON("data/settings.json");
 
 }
 function random(list){
 
     return list[Math.floor(Math.random()*list.length)];
+
+}
+
+function enabled(setting){
+
+    return DATA.settings[setting];
 
 }
 function set(id,value){
@@ -93,7 +101,9 @@ function getRandomBackground(){
 
     const features = getRaceFeatures(race.name);
 
-    appearance.gender = random(DATA.appearance.appearance.genders);
+    appearance.gender = enabled("randomGender")
+    ? random(DATA.appearance.appearance.genders)
+    : "Manuell";
 
     appearance.bodyType = random(race.bodyTypes);
 
@@ -227,9 +237,11 @@ function generateGuardian(){
 }
 function roll(){
 
-    generatePlayer(1);
+    for(let i=1;i<=DATA.settings.players;i++){
 
-    generatePlayer(2);
+    generatePlayer(i);
+
+}
 
     generateGuardian();
 
@@ -238,7 +250,7 @@ async function init(){
 
     await loadAllData();
 
-    roll();
+    animateRoll();
 
 }
 document
@@ -248,3 +260,31 @@ document
 
 
 init();
+
+function animateRoll(){
+
+    const values=document.querySelectorAll(".value");
+
+    let counter=0;
+
+    const interval=setInterval(()=>{
+
+        values.forEach(v=>{
+
+            v.textContent="🎲";
+
+        });
+
+        counter++;
+
+        if(counter>8){
+
+            clearInterval(interval);
+
+            roll();
+
+        }
+
+    },60);
+
+}
