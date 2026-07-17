@@ -1,580 +1,151 @@
 /*
-=========================================================
+==========================================================
 BG3 CHARACTER ROULETTE
-Version 0.2 Alpha
-=========================================================
+Version 0.3
+==========================================================
 */
 
 
+const DATA = {};
 
-/* =====================================================
-   DATEN
-===================================================== */
 
-const races = [
 
-"Mensch",
-"Elf",
-"Hochelf",
-"Waldelf",
-"Drow",
-"Tiefling",
-"Halbelf",
-"Zwerg",
-"Goldzwerg",
-"Schildzwerg",
-"Gnom",
-"Felsengnom",
-"Waldgnom",
-"Halbling",
-"Leichtfuß",
-"Kräftiger Halbling",
-"Halbork",
-"Githyanki",
-"Drachenblütiger"
+async function loadJSON(file){
 
-];
+    const response = await fetch(file);
 
+    if(!response.ok){
 
+        throw new Error("Datei konnte nicht geladen werden: " + file);
 
-const classes = [
+    }
 
-"Barbar",
-"Barde",
-"Kleriker",
-"Druide",
-"Kämpfer",
-"Mönch",
-"Paladin",
-"Waldläufer",
-"Schurke",
-"Hexenmeister",
-"Zauberer",
-"Magier"
-
-];
-
-
-
-const backgrounds = [
-
-"Akolyth",
-"Adliger",
-"Charlatan",
-"Krimineller",
-"Volksheld",
-"Soldat",
-"Weiser",
-"Seemann",
-"Einsiedler",
-"Unterhalter"
-
-];
-
-
-
-const genders = [
-
-"Männlich",
-"Weiblich"
-
-];
-
-
-
-const bodyTypes = [
-
-"Schlank",
-"Kräftig"
-
-];
-
-
-
-const voices = [
-
-"Stimme 1",
-"Stimme 2",
-"Stimme 3",
-"Stimme 4",
-"Stimme 5",
-"Stimme 6",
-"Stimme 7",
-"Stimme 8"
-
-];
-
-
-
-const faces = [
-
-"Zufällig"
-
-];
-
-
-
-const hairstyles = [
-
-"Zufällig"
-
-];
-
-
-
-const hairColors = [
-
-"Schwarz",
-"Braun",
-"Dunkelbraun",
-"Hellbraun",
-"Blond",
-"Platinblond",
-"Rot",
-"Weiß",
-"Grau",
-"Silber"
-
-];
-
-
-
-const eyeColors = [
-
-"Braun",
-"Blau",
-"Grün",
-"Grau",
-"Gold",
-"Bernstein",
-"Rot",
-"Lila"
-
-];
-
-
-
-const skinColors = [
-
-"Hell",
-"Gebräunt",
-"Oliv",
-"Dunkel"
-
-];
-
-
-
-const tattoos = [
-
-"Keine",
-"Zufällig"
-
-];
-
-
-
-const scars = [
-
-"Keine",
-"Zufällig"
-
-];
-
-
-
-/* =====================================================
-   HILFSFUNKTIONEN
-===================================================== */
-
-function random(array){
-
-return array[Math.floor(Math.random()*array.length)];
+    return await response.json();
 
 }
 
 
 
-function setValue(id,value){
+async function loadAllData(){
 
-const element=document.getElementById(id);
+    DATA.races = await loadJSON("data/races.json");
 
-if(!element) return;
+    DATA.classes = await loadJSON("data/classes.json");
 
-element.textContent=value;
+    DATA.backgrounds = await loadJSON("data/backgrounds.json");
 
-element.classList.remove("changed");
+    DATA.appearance = await loadJSON("data/appearance.json");
 
-void element.offsetWidth;
+    DATA.voices = await loadJSON("data/voices.json");
 
-element.classList.add("changed");
+    DATA.faces = await loadJSON("data/faces.json");
+
+    DATA.hairstyles = await loadJSON("data/hairstyles.json");
+
+    DATA.horns = await loadJSON("data/horns.json");
+
+    DATA.tails = await loadJSON("data/tails.json");
+
+    DATA.features = await loadJSON("data/raceFeatures.json");
 
 }
-/* =====================================================
-   CHARAKTER GENERIEREN
-===================================================== */
+function random(list){
 
-function generateCharacter(prefix){
+    return list[Math.floor(Math.random()*list.length)];
 
-setValue(prefix + "Race", random(races));
+}
+function set(id,value){
 
-setValue(prefix + "Subrace", "Zufällig");
+    const element=document.getElementById(id);
 
-setValue(prefix + "Class", random(classes));
+    if(element){
 
-setValue(prefix + "Subclass", "Zufällig");
+        element.textContent=value;
 
-setValue(prefix + "Background", random(backgrounds));
+    }
 
-setValue(prefix + "Gender", random(genders));
+}
+function getRandomRace(){
 
-setValue(prefix + "Bodytype", random(bodyTypes));
-
-setValue(prefix + "Voice", random(voices));
-
-setValue(prefix + "Face", random(faces));
-
-setValue(prefix + "Hair", random(hairstyles));
-
-setValue(prefix + "HairColor", random(hairColors));
-
-setValue(prefix + "EyeColor", random(eyeColors));
-
-setValue(prefix + "SkinColor", random(skinColors));
-
-setValue(prefix + "Tattoo", random(tattoos));
-
-setValue(prefix + "Scar", random(scars));
+    return random(DATA.races.races);
 
 }
 
 
 
-/* =====================================================
-   GUARDIAN
-===================================================== */
+function getRandomClass(){
 
+    return random(DATA.classes.classes);
+
+}
+
+
+
+function getRandomBackground(){
+
+    return random(DATA.backgrounds.backgrounds);
+
+}
+function generatePlayer(number){
+
+    const race=getRandomRace();
+
+    const playerClass=getRandomClass();
+
+    const background=getRandomBackground();
+
+
+
+    set("race"+number,race.name);
+
+    set("subrace"+number,random(race.subraces));
+
+
+
+    set("class"+number,playerClass.name);
+
+    set("subclass"+number,random(playerClass.subclasses));
+
+
+
+    set("background"+number,background.name);
+
+
+
+}
 function generateGuardian(){
 
-setValue("guardianRace", random(races));
+    const race=getRandomRace();
 
-setValue("guardianGender", random(genders));
 
-setValue("guardianBody", random(bodyTypes));
 
-setValue("guardianVoice", random(voices));
+    set("guardianRace",race.name);
 
-setValue("guardianFace", random(faces));
+    set("guardianGender",random(DATA.appearance.appearance.genders));
 
-setValue("guardianHair", random(hairstyles));
-
-setValue("guardianHairColor", random(hairColors));
-
-setValue("guardianEyeColor", random(eyeColors));
-
-setValue("guardianSkinColor", random(skinColors));
+    set("guardianBody",random(DATA.appearance.appearance.bodyTypes));
 
 }
+function roll(){
 
+    generatePlayer(1);
 
+    generatePlayer(2);
 
-/* =====================================================
-   GESAMTES ROULLETTE
-===================================================== */
-
-function rollCharacters(){
-
-generateCharacter("");
-
-// Spieler 1
-setValue("race1", random(races));
-setValue("subrace1", "Zufällig");
-setValue("class1", random(classes));
-setValue("subclass1", "Zufällig");
-setValue("background1", random(backgrounds));
-setValue("gender1", random(genders));
-setValue("bodytype1", random(bodyTypes));
-setValue("voice1", random(voices));
-setValue("face1", random(faces));
-setValue("hair1", random(hairstyles));
-setValue("hairColor1", random(hairColors));
-setValue("eyeColor1", random(eyeColors));
-setValue("skinColor1", random(skinColors));
-setValue("tattoo1", random(tattoos));
-setValue("scar1", random(scars));
-
-
-// Spieler 2
-setValue("race2", random(races));
-setValue("subrace2", "Zufällig");
-setValue("class2", random(classes));
-setValue("subclass2", "Zufällig");
-setValue("background2", random(backgrounds));
-setValue("gender2", random(genders));
-setValue("bodytype2", random(bodyTypes));
-setValue("voice2", random(voices));
-setValue("face2", random(faces));
-setValue("hair2", random(hairstyles));
-setValue("hairColor2", random(hairColors));
-setValue("eyeColor2", random(eyeColors));
-setValue("skinColor2", random(skinColors));
-setValue("tattoo2", random(tattoos));
-setValue("scar2", random(scars));
-
-generateGuardian();
+    generateGuardian();
 
 }
-/* =====================================================
-   BUTTONS
-===================================================== */
+async function init(){
 
-const rollButton = document.getElementById("rollButton");
+    await loadAllData();
 
-if (rollButton) {
-
-    rollButton.addEventListener("click", () => {
-
-        rollButton.disabled = true;
-
-        rollButton.textContent = "🎲 Würfeln...";
-
-        document.querySelectorAll(".value").forEach(element => {
-
-            element.classList.remove("changed");
-
-        });
-
-        setTimeout(() => {
-
-            rollCharacters();
-
-            rollButton.disabled = false;
-
-            rollButton.textContent = "🎲 Charakter würfeln";
-
-        }, 350);
-
-    });
+    roll();
 
 }
+document
+.getElementById("rollButton")
+.addEventListener("click",roll);
 
 
 
-/* =====================================================
-   ANIMATIONEN
-===================================================== */
-
-function animateValues() {
-
-    document.querySelectorAll(".value").forEach(element => {
-
-        element.classList.remove("changed");
-
-        void element.offsetWidth;
-
-        element.classList.add("changed");
-
-    });
-
-}
-
-
-
-/* =====================================================
-   SEITE GELADEN
-===================================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    rollCharacters();
-
-    animateValues();
-
-});
-
-
-
-/* =====================================================
-   HILFSFUNKTIONEN FÜR SPÄTERE VERSIONEN
-===================================================== */
-
-function randomBoolean() {
-
-    return Math.random() >= 0.5;
-
-}
-
-
-
-function randomNumber(min, max) {
-
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-
-}
-
-
-
-/*
-=========================================================
-
-Ab Version 0.3 werden hier JSON-Dateien geladen:
-
-- races.json
-- classes.json
-- appearance.json
-- voices.json
-- backgrounds.json
-
-Dadurch können später alle BG3-Daten gepflegt werden,
-ohne den JavaScript-Code anzupassen.
-
-=========================================================
-*/
-/* =====================================================
-   VERSION
-===================================================== */
-
-const APP = {
-
-    version: "0.2 Alpha",
-
-    game: "Baldur's Gate III Character Roulette"
-
-};
-
-
-
-console.log(APP.game);
-
-console.log(APP.version);
-
-
-
-/* =====================================================
-   ZUKÜNFTIGE MODULE
-===================================================== */
-
-const modules = {
-
-    races: true,
-
-    classes: true,
-
-    appearance: false,
-
-    guardian: true,
-
-    romance: false,
-
-    diceAnimation: false,
-
-    challenges: false,
-
-    honourMode: false,
-
-    darkUrge: false,
-
-    exportPDF: false
-
-};
-
-
-
-/* =====================================================
-   PLATZHALTER FÜR VERSION 0.3+
-===================================================== */
-
-async function loadData(){
-
-    // data/races.json
-    // data/classes.json
-    // data/backgrounds.json
-    // data/appearance.json
-
-}
-
-
-
-async function loadAppearance(){
-
-}
-
-
-
-async function loadClasses(){
-
-}
-
-
-
-async function loadBackgrounds(){
-
-}
-
-
-
-async function loadVoices(){
-
-}
-
-
-
-async function loadFaces(){
-
-}
-
-
-
-async function loadHair(){
-
-}
-
-
-
-async function loadGuardian(){
-
-}
-
-
-
-async function saveCharacter(){
-
-}
-
-
-
-async function exportPDF(){
-
-}
-
-
-
-/* =====================================================
-   DEBUG
-===================================================== */
-
-console.table({
-
-    Version:APP.version,
-
-    Rassen:races.length,
-
-    Klassen:classes.length,
-
-    Hintergründe:backgrounds.length,
-
-    Stimmen:voices.length,
-
-    Haarfarben:hairColors.length,
-
-    Augenfarben:eyeColors.length,
-
-    Hautfarben:skinColors.length
-
-});
-
-
-
-/* =====================================================
-   ENDE
-===================================================== */
+init();
