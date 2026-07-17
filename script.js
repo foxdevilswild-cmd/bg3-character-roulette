@@ -27,6 +27,13 @@ async function loadJSON(file){
 
 
 async function loadAllData(){
+    function validateData(){
+
+    console.log("===== BG3 DATA =====");
+
+    console.log(DATA);
+
+}
 
     DATA.races = await loadJSON("data/races.json");
 
@@ -272,6 +279,7 @@ function roll(){
 async function init(){
 
     await loadAllData();
+    validateData();
 
     animateRoll();
 
@@ -282,7 +290,30 @@ document
 
 
 
-init();
+async function init(){
+
+    try{
+
+        await loadAllData();
+
+        roll();
+
+        console.log("Alle Daten erfolgreich geladen.");
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        alert(
+            "Beim Laden der Daten ist ein Fehler aufgetreten.\n\n" +
+            "Öffne die Entwicklerkonsole (F12), um die genaue Ursache zu sehen."
+        );
+
+    }
+
+}
 
 function animateRoll(){
 
