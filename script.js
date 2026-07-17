@@ -286,7 +286,21 @@ async function init(){
 }
 document
 .getElementById("rollButton")
-.addEventListener("click",roll);
+const button = document.getElementById("rollButton");
+
+button.addEventListener("click", async ()=>{
+
+    button.disabled = true;
+
+    animateRoll();
+
+    setTimeout(()=>{
+
+        button.disabled = false;
+
+    },700);
+
+});
 
 
 
