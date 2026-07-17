@@ -1,0 +1,15 @@
+{
+  "faces": {
+    "human": [],
+    "elf": [],
+    "drow": [],
+    "halfElf": [],
+    "tiefling": [],
+    "dragonborn": [],
+    "githyanki": [],
+    "dwarf": [],
+    "gnome": [],
+    "halfling": [],
+    "halfOrc": []
+  }
+}
