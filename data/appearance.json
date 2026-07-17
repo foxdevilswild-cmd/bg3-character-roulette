@@ -1,13 +1,55 @@
 {
   "appearance": {
+
     "genders": [
       "Männlich",
       "Weiblich"
     ],
+
     "bodyTypes": [
-      "Körpertyp 1",
-      "Körpertyp 2"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
+
+    "skinTones": [
+      "Sehr hell",
+      "Hell",
+      "Hell mit Sommersprossen",
+      "Beige",
+      "Oliv",
+      "Bronze",
+      "Braun",
+      "Dunkelbraun",
+      "Sehr dunkel",
+      "Rot",
+      "Aschgrau",
+      "Grün",
+      "Blau",
+      "Violett"
+    ],
+
+    "eyeColors": [
+      "Braun",
+      "Hellbraun",
+      "Bernstein",
+      "Gold",
+      "Gelb",
+      "Orange",
+      "Rot",
+      "Pink",
+      "Grün",
+      "Hellgrün",
+      "Türkis",
+      "Blau",
+      "Hellblau",
+      "Violett",
+      "Lila",
+      "Schwarz",
+      "Weiß"
+    ],
+
     "hairColors": [
       "Schwarz",
       "Dunkelbraun",
@@ -15,51 +57,110 @@
       "Hellbraun",
       "Blond",
       "Platinblond",
-      "Rot",
-      "Kupfer",
       "Weiß",
       "Silber",
       "Grau",
-      "Schwarz mit weißen Strähnen"
-    ],
-    "eyeColors": [
-      "Braun",
-      "Hellbraun",
-      "Blau",
-      "Hellblau",
-      "Grün",
-      "Bernstein",
-      "Gold",
-      "Silber",
-      "Grau",
-      "Violett",
       "Rot",
-      "Schwarz"
+      "Kupfer",
+      "Rosa",
+      "Pink",
+      "Violett",
+      "Blau",
+      "Türkis",
+      "Grün"
     ],
-    "skinTones": [
-      "Sehr hell",
-      "Hell",
-      "Hell gebräunt",
-      "Gebräunt",
-      "Oliv",
-      "Dunkel",
-      "Sehr dunkel"
-    ],
+
     "tattoos": [
-      "Kein Tattoo",
-      "Zufällig"
+      "Keine",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
     ],
+
     "scars": [
       "Keine",
-      "Zufällig"
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
     ],
-    "makeup": [
-      "Keines",
-      "Zufällig"
-    ],
+
     "piercings": [
       "Keine",
-      "Zufällig"
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+
+    "makeup": [
+      "Keins",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
     ]
-  }
+
+  },
+
+  "horns": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+  ],
+
+  "tails": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ]
 }
