@@ -6,12 +6,6 @@
         "Berserker",
         "Wildherz",
         "Wilde Magie"
-      ],
-      "primaryAbility": "Stärke",
-      "armor": [
-        "Leicht",
-        "Mittel",
-        "Schilde"
       ]
     },
     {
@@ -20,43 +14,27 @@
         "College des Mutes",
         "College des Wissens",
         "College der Schwerter"
-      ],
-      "primaryAbility": "Charisma",
-      "armor": [
-        "Leicht"
       ]
     },
     {
       "name": "Kleriker",
       "subclasses": [
-        "Wissensdomäne",
-        "Lebensdomäne",
-        "Lichtdomäne",
-        "Naturdomäne",
-        "Sturmdomäne",
-        "Täuschungsdomäne",
-        "Kriegsdomäne"
-      ],
-      "primaryAbility": "Weisheit",
-      "armor": [
-        "Leicht",
-        "Mittel",
-        "Schwer",
-        "Schilde"
+        "Leben",
+        "Licht",
+        "List",
+        "Natur",
+        "Sturm",
+        "Krieg",
+        "Wissen",
+        "Täuschung"
       ]
     },
     {
       "name": "Druide",
       "subclasses": [
-        "Kreis des Landes",
-        "Kreis des Mondes",
-        "Kreis der Sporen"
-      ],
-      "primaryAbility": "Weisheit",
-      "armor": [
-        "Leicht",
-        "Mittel",
-        "Schilde"
+        "Land",
+        "Mond",
+        "Sporen"
       ]
     },
     {
@@ -64,68 +42,40 @@
       "subclasses": [
         "Champion",
         "Kampfmeister",
-        "Eldritch Knight"
-      ],
-      "primaryAbility": "Stärke",
-      "armor": [
-        "Leicht",
-        "Mittel",
-        "Schwer",
-        "Schilde"
+        "Arkaner Ritter"
       ]
     },
     {
       "name": "Mönch",
       "subclasses": [
-        "Weg der offenen Hand",
-        "Weg der vier Elemente",
-        "Weg des Schattens"
-      ],
-      "primaryAbility": "Geschicklichkeit",
-      "armor": [
-        "Keine"
+        "Offene Hand",
+        "Schatten",
+        "Vier Elemente"
       ]
     },
     {
       "name": "Paladin",
       "subclasses": [
         "Schwur der Hingabe",
-        "Schwur der Alten",
+        "Schwur der Ahnen",
         "Schwur der Vergeltung",
         "Schwurbrecher"
-      ],
-      "primaryAbility": "Stärke",
-      "armor": [
-        "Leicht",
-        "Mittel",
-        "Schwer",
-        "Schilde"
       ]
     },
     {
       "name": "Waldläufer",
       "subclasses": [
-        "Jäger",
         "Bestienmeister",
+        "Jäger",
         "Gloom Stalker"
-      ],
-      "primaryAbility": "Geschicklichkeit",
-      "armor": [
-        "Leicht",
-        "Mittel",
-        "Schilde"
       ]
     },
     {
       "name": "Schurke",
       "subclasses": [
         "Dieb",
-        "Assassine",
+        "Meuchelmörder",
         "Arkaner Betrüger"
-      ],
-      "primaryAbility": "Geschicklichkeit",
-      "armor": [
-        "Leicht"
       ]
     },
     {
@@ -134,22 +84,14 @@
         "Der Erzteufel",
         "Der Große Alte",
         "Der Feenfürst"
-      ],
-      "primaryAbility": "Charisma",
-      "armor": [
-        "Leicht"
       ]
     },
     {
       "name": "Zauberer",
       "subclasses": [
-        "Drachenblutlinie",
+        "Drakonische Blutlinie",
         "Wilde Magie",
-        "Sturmmagie"
-      ],
-      "primaryAbility": "Charisma",
-      "armor": [
-        "Keine"
+        "Sturmsorcerer"
       ]
     },
     {
@@ -157,16 +99,12 @@
       "subclasses": [
         "Hervorrufung",
         "Illusion",
-        "Beschwörung",
         "Nekromantie",
+        "Beschwörung",
         "Verzauberung",
         "Transmutation",
         "Wahrsagerei",
-        "Abjurierung"
-      ],
-      "primaryAbility": "Intelligenz",
-      "armor": [
-        "Keine"
+        "Bannmagie"
       ]
     }
   ]
