@@ -1001,3 +1001,43 @@ letter-spacing:2px;
 margin-bottom:15px;
 
 }
+/* =========================================================
+   GOLDEN DIVIDER
+========================================================= */
+
+.gold-divider{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin:20px 0;
+
+color:var(--gold);
+
+}
+
+
+.gold-divider::before,
+.gold-divider::after{
+
+content:"";
+
+height:1px;
+
+background:var(--gold);
+
+flex:1;
+
+opacity:.5;
+
+}
+
+
+.gold-divider span{
+
+font-size:1.2rem;
+
+}
