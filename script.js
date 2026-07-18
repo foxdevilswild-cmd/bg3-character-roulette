@@ -356,7 +356,9 @@ setTimeout(() => {
     </span>
 
 </div>
-
+<div class="gold-divider">
+    <span>✦</span>
+</div>
 
         ${
             player.subrace
