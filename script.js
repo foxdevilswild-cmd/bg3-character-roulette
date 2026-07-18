@@ -547,7 +547,7 @@ function roll() {
             generatePlayer(usedRomances);
 
 
-        playerOne.name = "Anni";
+        playerOne.playerName = "Anni";
 
 
         usedRomances.push(playerOne.romance);
@@ -557,7 +557,7 @@ function roll() {
             generatePlayer(usedRomances);
 
 
-        playerTwo.name = "Jenny";
+        playerTwo.playerName = "Jenny";
 
 
 
