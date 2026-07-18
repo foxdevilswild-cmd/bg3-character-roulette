@@ -173,12 +173,54 @@ margin-bottom:35px;
 
 #rollButton{
 
+font-family:"Cinzel",serif;
+
+font-size:1.1rem;
+
+letter-spacing:1px;
+
+padding:16px 42px;
+
+background:
+linear-gradient(
+180deg,
+#8b6d32,
+#6d5322
+);
+
+border:1px solid var(--gold);
+
+color:white;
+
+cursor:pointer;
+
+border-radius:8px;
+
+transition:.25s;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.45);
+
 position:relative;
 
 overflow:hidden;
 
 }
+#rollButton:hover{
 
+transform:translateY(-3px);
+
+box-shadow:
+0 12px 30px rgba(198,165,91,.30);
+
+background:
+linear-gradient(
+180deg,
+#9d7a36,
+#7a5d24
+);
+
+}
 
 #rollButton:hover::after{
 
@@ -257,27 +299,37 @@ position:relative;
 
 .character-card{
 
-background:
+position:relative;
 
+background:
 linear-gradient(
 180deg,
 rgba(43,38,33,.98),
 rgba(20,18,16,.98)
 );
 
-border:
-
-1px solid rgba(198,165,91,.45);
+border:1px solid rgba(198,165,91,.45);
 
 border-radius:14px;
 
 overflow:hidden;
 
 box-shadow:
-
 0 15px 35px rgba(0,0,0,.55);
 
 transition:.3s;
+
+}
+   .character-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 25px 50px rgba(0,0,0,.65);
+
+border-color:var(--gold);
+
+}
 
 position:relative;
 
@@ -1048,16 +1100,5 @@ opacity:.5;
 .gold-divider span{
 
 font-size:1.2rem;
-
-}
-#rollButton{
-
-background:red !important;
-
-color:white !important;
-
-font-size:30px !important;
-
-padding:20px !important;
 
 }
