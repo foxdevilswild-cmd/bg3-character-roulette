@@ -591,3 +591,22 @@ button{
 user-select:none;
 
 }
+.description {
+
+margin-top:25px;
+
+padding:20px;
+
+background:rgba(198,165,91,.08);
+
+border-left:3px solid var(--gold);
+
+font-style:italic;
+
+line-height:1.6;
+
+color:var(--gold-light);
+
+border-radius:6px;
+
+}
