@@ -62,6 +62,23 @@ function random(array) {
     }
 
     return array[Math.floor(Math.random() * array.length)];
+    
+    function generateName(race){
+
+    const names =
+        data.names[race];
+
+
+    if(!names){
+
+        return "Unbekannt";
+
+    }
+
+
+    return random(names);
+
+}
 
 }
 
@@ -229,7 +246,9 @@ function generatePlayer(usedRomances = []) {
     const race =
         generateRace();
 
-
+const name =
+    generateName(race.race);
+    
     const characterClass =
         generateClass();
 
@@ -239,12 +258,13 @@ function generatePlayer(usedRomances = []) {
 
     origin:
         origin.name,
-
+name:
+    name,
 
     race:
         race.race,
 
-
+       
     subrace:
         race.subrace,
 
@@ -283,7 +303,11 @@ function renderSummary(player, container) {
 
 
     container.innerHTML = `
+<div class="character-name">
 
+    ${player.name}
+
+</div>
 
         <h3>
             ${player.name || "Abenteurer"}
