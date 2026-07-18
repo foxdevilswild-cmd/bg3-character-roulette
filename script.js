@@ -339,10 +339,11 @@ function renderPlayer(player, container) {
         }
 
 
-        <div class="attribute">
-            <span class="label">Unterklasse</span>
-            <span class="value">${player.subclass}</span>
-        </div>
+        <div class="subclass-title">
+
+${player.subclass}
+
+</div>
 
 
 
