@@ -903,3 +903,44 @@ letter-spacing:1px;
 margin-bottom:25px;
 
 }
+/* =========================================================
+   CHARACTER REVEAL
+========================================================= */
+
+
+.character-card.reveal{
+
+animation:
+
+revealCard .8s ease;
+
+}
+
+
+@keyframes revealCard{
+
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateY(30px)
+scale(.96);
+
+}
+
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+scale(1);
+
+}
+
+}
