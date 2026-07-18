@@ -1,3 +1,5 @@
+console.log("script geladen");
+
 let data = {};
 
 
@@ -271,9 +273,7 @@ function generatePlayer(usedRomances = []) {
 player.description =
     generateDescription(player);
 
-console.log(player.description);
-
-return player;
+    return player;
 
 }
 
