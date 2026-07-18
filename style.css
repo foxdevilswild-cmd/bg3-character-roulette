@@ -776,3 +776,56 @@ color:var(--gold);
 font-family:"Cinzel",serif;
 
 }
+/* =========================================================
+   WÜRFEL ANIMATION
+========================================================= */
+
+#rollStatus{
+
+margin-top:25px;
+
+font-family:"Cinzel",serif;
+
+font-size:1.2rem;
+
+color:var(--gold-light);
+
+min-height:30px;
+
+opacity:0;
+
+transition:.3s;
+
+}
+
+
+#rollStatus.active{
+
+opacity:1;
+
+animation:pulseRoll 1s infinite;
+
+}
+
+
+@keyframes pulseRoll{
+
+0%{
+
+text-shadow:0 0 5px rgba(198,165,91,.3);
+
+}
+
+50%{
+
+text-shadow:0 0 20px rgba(198,165,91,.9);
+
+}
+
+100%{
+
+text-shadow:0 0 5px rgba(198,165,91,.3);
+
+}
+
+}
