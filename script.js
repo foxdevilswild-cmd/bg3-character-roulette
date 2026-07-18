@@ -510,7 +510,8 @@ const playerTwo =
         document.querySelector("#playerTwo")
 
     );
-
+console.log(document.querySelector("#summary1"));
+    
     renderSummary(
     playerOne,
     document.querySelector("#summary1")
