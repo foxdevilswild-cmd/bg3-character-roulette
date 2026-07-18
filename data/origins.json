@@ -1,54 +1,10 @@
 {
   "origins": [
     {
-      "name": "Tav",
-      "fixed": false
+      "name": "Tav"
     },
     {
-      "name": "Dark Urge",
-      "fixed": false
-    },
-    {
-      "name": "Astarion",
-      "fixed": true,
-      "race": "Halb-Elf",
-      "subrace": "Hochelfen-Halb-Elf",
-      "class": "Schurke"
-    },
-    {
-      "name": "Gale",
-      "fixed": true,
-      "race": "Mensch",
-      "subrace": null,
-      "class": "Magier"
-    },
-    {
-      "name": "Karlach",
-      "fixed": true,
-      "race": "Tiefling",
-      "subrace": "Zariel-Tiefling",
-      "class": "Barbar"
-    },
-    {
-      "name": "Lae'zel",
-      "fixed": true,
-      "race": "Githyanki",
-      "subrace": null,
-      "class": "Kämpfer"
-    },
-    {
-      "name": "Schattenherz",
-      "fixed": true,
-      "race": "Halb-Elf",
-      "subrace": "Hochelfen-Halb-Elf",
-      "class": "Kleriker"
-    },
-    {
-      "name": "Wyll",
-      "fixed": true,
-      "race": "Mensch",
-      "subrace": null,
-      "class": "Hexenmeister"
+      "name": "Dark Urge"
     }
   ]
 }
