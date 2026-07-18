@@ -22,7 +22,8 @@ async function loadAllData() {
         origins,
         races,
         romances,
-        descriptions
+        descriptions,
+        names
     ] = await Promise.all([
 
         loadJSON("data/appearance.json"),
@@ -31,7 +32,8 @@ async function loadAllData() {
         loadJSON("data/origins.json"),
         loadJSON("data/races.json"),
         loadJSON("data/romances.json"),
-        loadJSON("data/descriptions.json")
+        loadJSON("data/descriptions.json"),
+        loadJSON("data/names.json")
 
     ]);
 
@@ -44,12 +46,12 @@ async function loadAllData() {
         origins,
         races,
         romances,
-        descriptions
+        descriptions,
+        names
 
     };
 
 }
-
 
 
 
