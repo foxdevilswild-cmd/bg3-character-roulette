@@ -829,3 +829,44 @@ text-shadow:0 0 5px rgba(198,165,91,.3);
 }
 
 }
+/* =========================================================
+   CHARACTER TAGS
+========================================================= */
+
+
+.character-tags{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+margin-bottom:25px;
+
+flex-wrap:wrap;
+
+}
+
+
+.tag{
+
+font-family:"Cinzel",serif;
+
+font-size:.9rem;
+
+letter-spacing:1px;
+
+padding:8px 16px;
+
+border-radius:20px;
+
+background:
+
+rgba(198,165,91,.15);
+
+border:1px solid var(--gold);
+
+color:var(--gold-light);
+
+}
