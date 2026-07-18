@@ -312,10 +312,17 @@ function renderPlayer(player, container) {
     container.innerHTML = `
 
 
-        <div class="attribute">
-            <span class="label">Rasse</span>
-            <span class="value">${player.race}</span>
-        </div>
+       <div class="character-tags">
+
+    <span class="tag">
+        ${player.race}
+    </span>
+
+    <span class="tag">
+        ${player.class}
+    </span>
+
+</div>
 
 
         ${
@@ -330,14 +337,6 @@ function renderPlayer(player, container) {
             :
             ""
         }
-
-
-
-        <div class="attribute">
-            <span class="label">Klasse</span>
-            <span class="value">${player.class}</span>
-        </div>
-
 
 
         <div class="attribute">
