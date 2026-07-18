@@ -354,10 +354,17 @@ function renderPlayer(player, container) {
 
 
 
-        <div class="attribute">
-            <span class="label">Romanze</span>
-            <span class="value">${player.romance}</span>
-        </div>
+        <div class="attribute romance-box">
+
+    <span class="label">
+        ♥ Romanze
+    </span>
+
+    <span class="value">
+        ${player.romance}
+    </span>
+
+</div>
 
 
 
