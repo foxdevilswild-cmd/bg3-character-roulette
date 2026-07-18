@@ -944,3 +944,40 @@ scale(1);
 }
 
 }
+/* =========================================================
+   BUTTON ROLL ANIMATION
+========================================================= */
+
+#rollButton.rolling{
+
+animation: buttonRoll .7s ease;
+
+}
+
+
+@keyframes buttonRoll{
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 30px rgba(198,165,91,.7);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
