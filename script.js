@@ -335,6 +335,9 @@ function renderPlayer(player, container) {
 ${player.description}
 
 </div>
+`;
+
+}
 
         <hr>
 
