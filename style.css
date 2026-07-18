@@ -77,162 +77,209 @@ padding:40px 0 80px;
 
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
-
-.hero {
+.hero{
 
 text-align:center;
 
-padding:80px 20px 60px;
-
-border-bottom:1px solid var(--border);
+padding:90px 20px 70px;
 
 background:
-
 linear-gradient(
 180deg,
-rgba(25,25,25,.80),
-rgba(15,15,15,.60)
+rgba(24,24,24,.88),
+rgba(15,15,15,.68)
 );
 
-backdrop-filter:blur(3px);
+border-bottom:1px solid rgba(198,165,91,.25);
+
+backdrop-filter:blur(5px);
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.45);
 
 }
 
+.hero-content{
 
-.version {
-
-font-family:"Cinzel",serif;
-
-letter-spacing:3px;
-
-font-size:.8rem;
-
-color:var(--gold-light);
-
-margin-bottom:15px;
-
-text-transform:uppercase;
-
-}
-
-
-.hero h1 {
-
-font-family:"Cinzel",serif;
-
-font-size:3.6rem;
-
-color:var(--gold);
-
-letter-spacing:3px;
-
-margin-bottom:10px;
-
-text-shadow:
-0 0 10px rgba(198,165,91,.35);
-
-}
-
-
-.hero h2 {
-
-font-family:"Cinzel",serif;
-
-font-size:1.8rem;
-
-font-weight:400;
-
-color:var(--gold-light);
-
-margin-bottom:25px;
-
-}
-
-
-.subtitle {
-
-max-width:650px;
+max-width:900px;
 
 margin:auto;
 
-font-size:1.2rem;
+}
 
-line-height:1.6;
+.version{
+
+font-family:"Cinzel",serif;
+
+font-size:.9rem;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:var(--gold-light);
+
+opacity:.85;
+
+margin-bottom:18px;
+
+}
+
+.hero h1{
+
+font-family:"Cinzel",serif;
+
+font-size:4rem;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+color:var(--gold);
+
+text-shadow:
+
+0 0 18px rgba(198,165,91,.35);
+
+margin-bottom:10px;
+
+}
+
+.hero h2{
+
+font-family:"Cinzel",serif;
+
+font-size:2rem;
+
+font-weight:400;
+
+letter-spacing:2px;
+
+color:var(--gold-light);
+
+margin-bottom:28px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:0 auto 45px;
+
+font-size:1.25rem;
+
+line-height:1.7;
 
 color:var(--text-dark);
-
-margin-bottom:35px;
 
 }
 
 
 
+/* =========================================================
+   BUTTON
+========================================================= */
+
 #rollButton{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+padding:18px 46px;
 
 font-family:"Cinzel",serif;
 
-font-size:1.1rem;
+font-size:1.05rem;
 
-letter-spacing:1px;
+letter-spacing:1.5px;
 
-padding:16px 42px;
-
-background:
-linear-gradient(
-180deg,
-#8b6d32,
-#6d5322
-);
-
-border:1px solid var(--gold);
-
-color:white;
+color:var(--text);
 
 cursor:pointer;
 
-border-radius:8px;
+border-radius:10px;
 
-transition:.25s;
+border:1px solid rgba(198,165,91,.65);
+
+background:
+
+linear-gradient(
+180deg,
+#9a7a38,
+#6f5424
+);
 
 box-shadow:
-0 8px 25px rgba(0,0,0,.45);
+
+0 10px 25px rgba(0,0,0,.45);
+
+transition:
+
+transform .25s,
+box-shadow .25s,
+background .25s;
 
 position:relative;
 
 overflow:hidden;
 
 }
+
 #rollButton:hover{
 
 transform:translateY(-3px);
 
-box-shadow:
-0 12px 30px rgba(198,165,91,.30);
-
 background:
+
 linear-gradient(
 180deg,
-#9d7a36,
-#7a5d24
+#b18d45,
+#816126
 );
+
+box-shadow:
+
+0 15px 35px rgba(198,165,91,.35);
 
 }
 
-#rollButton:hover::after{
+#rollButton:active{
+
+transform:scale(.97);
+
+}
+
+#rollButton:focus{
+
+outline:none;
+
+box-shadow:
+
+0 0 0 3px rgba(198,165,91,.30);
+
+}
+
+#rollButton::after{
 
 content:"";
 
 position:absolute;
 
-left:0;
-
 top:0;
 
-width:100%;
+left:-120%;
+
+width:80%;
 
 height:100%;
 
@@ -241,34 +288,19 @@ background:
 linear-gradient(
 120deg,
 transparent,
-rgba(255,255,255,.25),
+rgba(255,255,255,.35),
 transparent
 );
 
-animation:
-
-shine 1s;
+transition:left .8s;
 
 }
 
+#rollButton:hover::after{
 
-@keyframes shine{
-
-from{
-
-transform:translateX(-100%);
+left:130%;
 
 }
-
-to{
-
-transform:translateX(100%);
-
-}
-
-}
-
-
 
 /* =========================
    CHARACTER CARDS
