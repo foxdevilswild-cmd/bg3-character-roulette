@@ -1,1 +1,125 @@
 
+{
+  "races": {
+    "Mensch": [
+      "Ein vielseitiger Charakter, der sich durch Anpassungsfähigkeit und Ehrgeiz einen Platz in der Welt sucht.",
+      "Ein Mensch mit großen Träumen und der Fähigkeit, sich in jeder Umgebung zurechtzufinden."
+    ],
+
+    "Elf": [
+      "Ein stolzer Elf, geprägt von jahrhundertelanger Tradition und einer tiefen Verbindung zur Welt um sich herum.",
+      "Ein geheimnisvoller Elf, der zwischen alten Bräuchen und neuen Erfahrungen seinen eigenen Weg sucht."
+    ],
+
+    "Drow": [
+      "Eine Drow, die sich von den Schatten ihrer Herkunft lösen und ihr eigenes Schicksal bestimmen möchte.",
+      "Ein Charakter aus den Tiefen der Unterwelt, der zwischen Tradition, Freiheit und persönlicher Wahrheit steht."
+    ],
+
+    "Tiefling": [
+      "Ein Tiefling, der gelernt hat, Vorurteile zu überwinden und seine ungewöhnliche Herkunft als Stärke zu nutzen.",
+      "Ein von vielen unterschätzter Charakter, der beweisen möchte, dass seine Abstammung nicht sein Schicksal bestimmt."
+    ],
+
+    "Halb-Elf": [
+      "Ein Halb-Elf zwischen zwei Welten, der versucht, seinen eigenen Platz zu finden.",
+      "Ein Wanderer zwischen verschiedenen Kulturen, der die Vorteile beider Herkunftslinien vereint."
+    ],
+
+    "Zwerg": [
+      "Ein stolzer Zwerg, dessen Entschlossenheit und Traditionen ihn durch jedes Abenteuer tragen.",
+      "Ein standhafter Charakter, der Loyalität, Handwerk und Ehre über alles stellt."
+    ],
+
+    "Halbling": [
+      "Ein unterschätzter Halbling mit großem Mut und einer Vorliebe für unerwartete Abenteuer.",
+      "Ein kleiner Charakter mit einem außergewöhnlich großen Herzen und einer Menge Durchhaltevermögen."
+    ],
+
+    "Gnom": [
+      "Ein neugieriger Gnom, dessen Erfindungsgeist und Vorstellungskraft keine Grenzen kennen.",
+      "Ein wissbegieriger Charakter, der die Welt mit klugem Verstand und unerschütterlicher Neugier erkundet."
+    ],
+
+    "Halb-Ork": [
+      "Ein Halb-Ork, der zwischen roher Kraft und innerer Stärke seinen eigenen Weg gefunden hat.",
+      "Ein Kämpfer mit beeindruckender Präsenz, der beweisen möchte, dass mehr in ihm steckt als Vorurteile vermuten lassen."
+    ],
+
+    "Githyanki": [
+      "Ein Githyanki, geprägt von Disziplin und der Suche nach einem Platz außerhalb seiner strengen Traditionen.",
+      "Ein Krieger aus den Sternen, dessen Vergangenheit ebenso faszinierend wie fremd ist."
+    ],
+
+    "Drachenblütiger": [
+      "Ein Drachenblütiger, dessen imposante Erscheinung seine innere Entschlossenheit widerspiegelt.",
+      "Ein Charakter mit uralter Abstammung und dem Wunsch, seinen eigenen Namen legendär zu machen."
+    ]
+  },
+
+
+  "classes": {
+
+    "Barbar": [
+      "Ein ungezähmter Krieger, dessen Stärke aus Instinkt, Wut und unbändigem Willen entsteht.",
+      "Ein wilder Kämpfer, der sich mitten ins Chaos stürzt und niemals zurückweicht."
+    ],
+
+    "Barde": [
+      "Ein charismatischer Abenteurer, der Worte, Musik und Mut als seine größten Waffen nutzt.",
+      "Ein Geschichtenerzähler, dessen Einfluss weit über das Schlachtfeld hinausreicht."
+    ],
+
+    "Druide": [
+      "Ein Hüter der Natur, der die Balance zwischen Zivilisation und Wildnis bewahren möchte.",
+      "Ein Wanderer, der die Kräfte der Natur nutzt, um seine Verbündeten zu schützen."
+    ],
+
+    "Hexenmeister": [
+      "Ein Charakter, dessen Macht aus einem geheimnisvollen Pakt und einer außergewöhnlichen Verbindung stammt.",
+      "Ein Suchender, der durch eine ungewöhnliche Quelle zu großer Macht gelangt ist."
+    ],
+
+    "Kämpfer": [
+      "Ein disziplinierter Kämpfer, der Technik, Erfahrung und Willenskraft perfektioniert hat.",
+      "Ein Meister des Kampfes, der sich auf Können statt auf Magie verlässt."
+    ],
+
+    "Kleriker": [
+      "Ein Diener einer höheren Macht, dessen Glaube seine Entscheidungen bestimmt.",
+      "Ein spiritueller Kämpfer, der Schutz und Zerstörung gleichermaßen beherrscht."
+    ],
+
+    "Magier": [
+      "Ein Gelehrter der arkanen Künste, der die Geheimnisse der Magie entschlüsseln möchte.",
+      "Ein Suchender nach Wissen, für den jede Entdeckung eine neue Möglichkeit eröffnet."
+    ],
+
+    "Mönch": [
+      "Ein disziplinierter Kämpfer, der Körper und Geist zu einer Einheit verbindet.",
+      "Ein Wanderer, der innere Ruhe und außergewöhnliche Kampfkraft vereint."
+    ],
+
+    "Paladin": [
+      "Ein Schwur bindet diesen Charakter an Ideale, die größer sind als persönliche Wünsche.",
+      "Ein Streiter für seine Überzeugungen, dessen Ehre auf die Probe gestellt wird."
+    ],
+
+    "Schurke": [
+      "Ein Meister der Schatten, der mit Geschick, List und Präzision seinen Weg geht.",
+      "Ein Überlebenskünstler, der jede Situation mit Kreativität löst."
+    ],
+
+    "Waldläufer": [
+      "Ein erfahrener Wanderer, der die Wildnis kennt und Gefahren früh erkennt.",
+      "Ein Jäger und Beschützer, dessen Verbindung zur Natur seine Stärke ist."
+    ],
+
+    "Zauberer": [
+      "Ein Magiebegabter, dessen Kräfte aus seinem eigenen Inneren stammen.",
+      "Ein Charakter mit angeborener Macht, die ebenso faszinierend wie gefährlich sein kann."
+    ]
+
+  }
+
+}
