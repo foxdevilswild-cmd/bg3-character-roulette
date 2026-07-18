@@ -4,37 +4,32 @@
       "name": "Barbar",
       "subclasses": [
         "Berserker",
-        "Wildherz",
-        "Wilde Magie"
+        "Wildkreatur",
+        "Wilder Magier"
       ]
     },
     {
       "name": "Barde",
       "subclasses": [
-        "College des Mutes",
-        "College des Wissens",
-        "College der Schwerter"
-      ]
-    },
-    {
-      "name": "Kleriker",
-      "subclasses": [
-        "Leben",
-        "Licht",
-        "List",
-        "Natur",
-        "Sturm",
-        "Krieg",
-        "Wissen",
-        "Täuschung"
+        "Schule des Wissens",
+        "Schule des Mutes",
+        "Schule der Schwerter"
       ]
     },
     {
       "name": "Druide",
       "subclasses": [
-        "Land",
-        "Mond",
-        "Sporen"
+        "Kreis des Landes",
+        "Kreis des Mondes",
+        "Kreis der Sporen"
+      ]
+    },
+    {
+      "name": "Hexenmeister",
+      "subclasses": [
+        "Der Unhold",
+        "Der Große Alte",
+        "Der Archfey"
       ]
     },
     {
@@ -42,69 +37,72 @@
       "subclasses": [
         "Champion",
         "Kampfmeister",
-        "Arkaner Ritter"
+        "Eldritch Knight"
+      ]
+    },
+    {
+      "name": "Kleriker",
+      "subclasses": [
+        "Domäne des Lebens",
+        "Domäne des Lichts",
+        "Domäne der Täuschung",
+        "Domäne des Wissens",
+        "Domäne der Natur",
+        "Domäne des Sturms",
+        "Domäne des Krieges"
+      ]
+    },
+    {
+      "name": "Magier",
+      "subclasses": [
+        "Schule der Bannmagie",
+        "Schule der Beschwörung",
+        "Schule der Erkenntnismagie",
+        "Schule der Hervorrufung",
+        "Schule der Illusionsmagie",
+        "Schule der Nekromantie",
+        "Schule der Transmutation"
       ]
     },
     {
       "name": "Mönch",
       "subclasses": [
-        "Offene Hand",
-        "Schatten",
-        "Vier Elemente"
+        "Weg der offenen Hand",
+        "Weg der Schatten",
+        "Weg der vier Elemente"
       ]
     },
     {
       "name": "Paladin",
       "subclasses": [
-        "Schwur der Hingabe",
-        "Schwur der Ahnen",
-        "Schwur der Vergeltung",
-        "Schwurbrecher"
-      ]
-    },
-    {
-      "name": "Waldläufer",
-      "subclasses": [
-        "Bestienmeister",
-        "Jäger",
-        "Gloom Stalker"
+        "Eid der Hingabe",
+        "Eid der Alten",
+        "Eid der Rache",
+        "Eidbrecher"
       ]
     },
     {
       "name": "Schurke",
       "subclasses": [
         "Dieb",
-        "Meuchelmörder",
+        "Assassine",
         "Arkaner Betrüger"
       ]
     },
     {
-      "name": "Hexenmeister",
+      "name": "Waldläufer",
       "subclasses": [
-        "Der Erzteufel",
-        "Der Große Alte",
-        "Der Feenfürst"
+        "Jäger",
+        "Tierbändiger",
+        "Düsterpirscher"
       ]
     },
     {
       "name": "Zauberer",
       "subclasses": [
-        "Drakonische Blutlinie",
+        "Drachenblutlinie",
         "Wilde Magie",
-        "Sturmsorcerer"
-      ]
-    },
-    {
-      "name": "Magier",
-      "subclasses": [
-        "Hervorrufung",
-        "Illusion",
-        "Nekromantie",
-        "Beschwörung",
-        "Verzauberung",
-        "Transmutation",
-        "Wahrsagerei",
-        "Bannmagie"
+        "Sturmmagie"
       ]
     }
   ]
