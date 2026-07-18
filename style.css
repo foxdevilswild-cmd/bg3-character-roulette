@@ -610,3 +610,112 @@ color:var(--gold-light);
 border-radius:6px;
 
 }
+/* =========================================================
+   ABENTEUER ZUSAMMENFASSUNG
+========================================================= */
+
+
+.adventure-section{
+
+margin-top:50px;
+
+}
+
+
+.adventure-card{
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(43,38,33,.95),
+
+rgba(28,24,21,.95)
+
+);
+
+border:1px solid var(--border);
+
+border-radius:12px;
+
+padding:35px;
+
+box-shadow:
+
+0 20px 45px var(--shadow);
+
+}
+
+
+
+.adventure-card h2{
+
+font-family:"Cinzel",serif;
+
+text-align:center;
+
+color:var(--gold);
+
+font-size:2rem;
+
+letter-spacing:2px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.adventure-content{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+}
+
+
+
+.adventure-content div{
+
+padding:25px;
+
+background:rgba(198,165,91,.08);
+
+border-left:3px solid var(--gold);
+
+border-radius:6px;
+
+font-size:1.2rem;
+
+line-height:1.6;
+
+}
+
+
+
+.adventure-content h3{
+
+font-family:"Cinzel",serif;
+
+color:var(--gold-light);
+
+margin-bottom:10px;
+
+}
+
+
+
+@media(max-width:768px){
+
+.adventure-content{
+
+grid-template-columns:1fr;
+
+}
+
+}
