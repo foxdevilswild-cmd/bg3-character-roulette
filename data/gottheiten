@@ -1,0 +1,104 @@
+{
+  "deities": [
+    {
+      "name": "Selûne",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Shar",
+      "alignment": "Böse"
+    },
+    {
+      "name": "Mystra",
+      "alignment": "Neutral"
+    },
+    {
+      "name": "Tyr",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Torm",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Ilmater",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Helm",
+      "alignment": "Neutral"
+    },
+    {
+      "name": "Lathander",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Tempus",
+      "alignment": "Neutral"
+    },
+    {
+      "name": "Kelemvor",
+      "alignment": "Neutral"
+    },
+    {
+      "name": "Oghma",
+      "alignment": "Neutral"
+    },
+    {
+      "name": "Mielikki",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Corellon Larethian",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Moradin",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Yondalla",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Garl Glittergold",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Eilistraee",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Lolth",
+      "alignment": "Böse"
+    },
+    {
+      "name": "Gruumsh",
+      "alignment": "Böse"
+    },
+    {
+      "name": "Talos",
+      "alignment": "Böse"
+    },
+    {
+      "name": "Umberlee",
+      "alignment": "Chaotisch"
+    },
+    {
+      "name": "Bahamut",
+      "alignment": "Gut"
+    },
+    {
+      "name": "Bane",
+      "alignment": "Böse"
+    },
+    {
+      "name": "Bhaal",
+      "alignment": "Böse"
+    },
+    {
+      "name": "Myrkul",
+      "alignment": "Böse"
+    }
+  ]
+}
