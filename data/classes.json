@@ -3,9 +3,10 @@
     {
       "name": "Barbar",
       "subclasses": [
-        "Berserker",
-        "Wildkreatur",
-        "Wilder Magier"
+        "Pfad des Berserkers",
+        "Pfad des Wilden Herzens",
+        "Pfad der Wilden Magie"
+        "Pfad der Riesen"
       ]
     },
     {
@@ -14,14 +15,16 @@
         "Schule des Wissens",
         "Schule des Mutes",
         "Schule der Schwerter"
+        "Schule des Zauberbanns"
       ]
     },
     {
       "name": "Druide",
       "subclasses": [
-        "Kreis des Landes",
-        "Kreis des Mondes",
-        "Kreis der Sporen"
+        "Zirkel des Landes",
+        "Zirkel des Mondes",
+        "Zirkel der Sporen"
+        "Zirkel der Sterne"
       ]
     },
     {
@@ -29,7 +32,8 @@
       "subclasses": [
         "Der Unhold",
         "Der Große Alte",
-        "Der Archfey"
+        "Die Erzfee"
+        "Fluchklinge"
       ]
     },
     {
@@ -37,7 +41,8 @@
       "subclasses": [
         "Champion",
         "Kampfmeister",
-        "Eldritch Knight"
+        "Mystischer Ritter"
+        "Arkaner Bogenschütze"
       ]
     },
     {
@@ -45,10 +50,11 @@
       "subclasses": [
         "Domäne des Lebens",
         "Domäne des Lichts",
-        "Domäne der Täuschung",
+        "Domäne der List",
         "Domäne des Wissens",
         "Domäne der Natur",
         "Domäne des Sturms",
+        "Domäne des Todes"
         "Domäne des Krieges"
       ]
     },
@@ -59,9 +65,11 @@
         "Schule der Beschwörung",
         "Schule der Erkenntnismagie",
         "Schule der Hervorrufung",
-        "Schule der Illusionsmagie",
+        "Schule der Illusion",
         "Schule der Nekromantie",
+        "Schule der Verzauberung"
         "Schule der Transmutation"
+        "Klingengesang"
       ]
     },
     {
@@ -70,15 +78,17 @@
         "Weg der offenen Hand",
         "Weg der Schatten",
         "Weg der vier Elemente"
+        "Weg des trunkenen Meisters"
       ]
     },
     {
       "name": "Paladin",
       "subclasses": [
-        "Eid der Hingabe",
-        "Eid der Alten",
-        "Eid der Rache",
+        "Schwur der Hingabe",
+        "Schwur der Alten",
+        "Schwur der Rache",
         "Eidbrecher"
+        "Schwur der Krone"
       ]
     },
     {
@@ -87,6 +97,7 @@
         "Dieb",
         "Assassine",
         "Arkaner Betrüger"
+        "Haudegen"
       ]
     },
     {
@@ -95,6 +106,7 @@
         "Jäger",
         "Tierbändiger",
         "Düsterpirscher"
+        "Schwarmhüter"
       ]
     },
     {
@@ -103,6 +115,7 @@
         "Drachenblutlinie",
         "Wilde Magie",
         "Sturmmagie"
+        "Schattenmagie"
       ]
     }
   ]
