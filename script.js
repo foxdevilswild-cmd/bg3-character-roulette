@@ -82,7 +82,17 @@ function generateRace() {
 }
 
 
+function generateRomance(usedRomances = []) {
 
+    const availableRomances =
+        data.romances.romances.filter(
+            romance => !usedRomances.includes(romance)
+        );
+
+
+    return random(availableRomances);
+
+}
 
 function generateClass() {
 
@@ -151,7 +161,7 @@ function generateAppearance() {
 
 
 
-function generatePlayer() {
+function generatePlayer(usedRomances = []) {
 
 
     const origin =
@@ -194,8 +204,8 @@ function generatePlayer() {
             random(data.backgrounds.backgrounds),
 
 
-        romance:
-            random(data.romances.romances),
+       romance:
+    generateRomance(usedRomances),
 
 
         appearance:
@@ -377,12 +387,18 @@ function roll() {
     animateRoll();
 
 
-    const playerOne =
-        generatePlayer();
+const usedRomances = [];
 
 
-    const playerTwo =
-        generatePlayer();
+const playerOne =
+    generatePlayer(usedRomances);
+
+
+usedRomances.push(playerOne.romance);
+
+
+const playerTwo =
+    generatePlayer(usedRomances);
 
 
 
