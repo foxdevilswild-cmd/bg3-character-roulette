@@ -512,57 +512,70 @@ function roll() {
     animateRoll();
 
 
-const usedRomances = [];
+    setTimeout(() => {
 
 
-const playerOne =
-    generatePlayer(usedRomances);
-
-playerOne.name = "Anni";
+        const usedRomances = [];
 
 
-usedRomances.push(playerOne.romance);
+        const playerOne =
+            generatePlayer(usedRomances);
 
 
-const playerTwo =
-    generatePlayer(usedRomances);
-
-playerTwo.name = "Jenny";
+        playerOne.name = "Anni";
 
 
-    renderPlayer(
+        usedRomances.push(playerOne.romance);
 
-        playerOne,
 
-        document.querySelector("#playerOne")
+        const playerTwo =
+            generatePlayer(usedRomances);
 
-    );
+
+        playerTwo.name = "Jenny";
 
 
 
-    renderPlayer(
+        renderPlayer(
 
-        playerTwo,
+            playerOne,
 
-        document.querySelector("#playerTwo")
+            document.querySelector("#playerOne")
 
-    );
-console.log(document.querySelector("#summary1"));
-    
-    renderSummary(
-    playerOne,
-    document.querySelector("#summary1")
-);
+        );
 
 
-renderSummary(
-    playerTwo,
-    document.querySelector("#summary2")
-);
+        renderPlayer(
+
+            playerTwo,
+
+            document.querySelector("#playerTwo")
+
+        );
+
+
+        renderSummary(
+
+            playerOne,
+
+            document.querySelector("#summary1")
+
+        );
+
+
+        renderSummary(
+
+            playerTwo,
+
+            document.querySelector("#summary2")
+
+        );
+
+
+    }, 1800);
 
 
 }
-
 
 
 
