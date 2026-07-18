@@ -719,3 +719,60 @@ grid-template-columns:1fr;
 }
 
 }
+/* =========================================================
+   CHARAKTER BESCHREIBUNG
+========================================================= */
+
+
+.description{
+
+margin:25px 0;
+
+padding:20px;
+
+background:
+
+rgba(198,165,91,.08);
+
+border-left:3px solid var(--gold);
+
+border-radius:6px;
+
+font-size:1.15rem;
+
+line-height:1.6;
+
+font-style:italic;
+
+color:var(--gold-light);
+
+}
+
+
+/* =========================================================
+   ROMANZE
+========================================================= */
+
+
+.romance-box{
+
+background:
+
+rgba(198,165,91,.12);
+
+border-radius:6px;
+
+padding-left:12px;
+
+padding-right:12px;
+
+}
+
+
+.romance-box .value{
+
+color:var(--gold);
+
+font-family:"Cinzel",serif;
+
+}
