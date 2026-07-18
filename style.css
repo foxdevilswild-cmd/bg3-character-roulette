@@ -260,16 +260,15 @@ content:"✦";
 
 position:absolute;
 
-top:12px;
+top:8px;
 
-left:15px;
+right:14px;
 
-color:var(--gold);
+font-size:1rem;
 
-font-size:1.2rem;
+color:rgba(198,165,91,.5);
 
-opacity:.7;
-
+}
 }
 
 .character-card:hover{
