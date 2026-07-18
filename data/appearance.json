@@ -1,166 +1,121 @@
 {
-  "appearance": {
-
-    "genders": [
-      "Männlich",
-      "Weiblich"
-    ],
-
-    "bodyTypes": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-
-    "skinTones": [
-      "Sehr hell",
-      "Hell",
-      "Hell mit Sommersprossen",
-      "Beige",
-      "Oliv",
-      "Bronze",
-      "Braun",
-      "Dunkelbraun",
-      "Sehr dunkel",
-      "Rot",
-      "Aschgrau",
-      "Grün",
-      "Blau",
-      "Violett"
-    ],
-
-    "eyeColors": [
-      "Braun",
-      "Hellbraun",
-      "Bernstein",
-      "Gold",
-      "Gelb",
-      "Orange",
-      "Rot",
-      "Pink",
-      "Grün",
-      "Hellgrün",
-      "Türkis",
-      "Blau",
-      "Hellblau",
-      "Violett",
-      "Lila",
-      "Schwarz",
-      "Weiß"
-    ],
-
-    "hairColors": [
-      "Schwarz",
-      "Dunkelbraun",
-      "Braun",
-      "Hellbraun",
-      "Blond",
-      "Platinblond",
-      "Weiß",
-      "Silber",
-      "Grau",
-      "Rot",
-      "Kupfer",
-      "Rosa",
-      "Pink",
-      "Violett",
-      "Blau",
-      "Türkis",
-      "Grün"
-    ],
-
-    "tattoos": [
-      "Keine",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12",
-      "13",
-      "14",
-      "15"
-    ],
-
-    "scars": [
-      "Keine",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-
-    "piercings": [
-      "Keine",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10"
-    ],
-
-    "makeup": [
-      "Keins",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12"
-    ]
-
-  },
-
-  "horns": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15"
+  "gender": [
+    "Männlich",
+    "Weiblich",
+    "Nichtbinär"
   ],
 
-  "tails": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6"
+  "bodyTypes": [
+    "Körpertyp 1",
+    "Körpertyp 2",
+    "Körpertyp 3",
+    "Körpertyp 4"
+  ],
+
+  "voices": [
+    "Stimme 1",
+    "Stimme 2",
+    "Stimme 3",
+    "Stimme 4",
+    "Stimme 5",
+    "Stimme 6",
+    "Stimme 7",
+    "Stimme 8"
+  ],
+
+  "faces": [
+    "Gesicht 1",
+    "Gesicht 2",
+    "Gesicht 3",
+    "Gesicht 4",
+    "Gesicht 5",
+    "Gesicht 6",
+    "Gesicht 7",
+    "Gesicht 8",
+    "Gesicht 9",
+    "Gesicht 10"
+  ],
+
+  "hairstyles": [
+    "Frisur 1",
+    "Frisur 2",
+    "Frisur 3",
+    "Frisur 4",
+    "Frisur 5",
+    "Frisur 6",
+    "Frisur 7",
+    "Frisur 8",
+    "Frisur 9",
+    "Frisur 10"
+  ],
+
+  "hairColors": [
+    "Schwarz",
+    "Dunkelbraun",
+    "Braun",
+    "Hellbraun",
+    "Blond",
+    "Weiß",
+    "Silber",
+    "Rot",
+    "Kupfer",
+    "Blau",
+    "Grün",
+    "Lila"
+  ],
+
+  "eyeColors": [
+    "Braun",
+    "Dunkelbraun",
+    "Blau",
+    "Grün",
+    "Grau",
+    "Gold",
+    "Silber",
+    "Violett",
+    "Rot"
+  ],
+
+  "skinColors": [
+    "Sehr hell",
+    "Hell",
+    "Mittel",
+    "Dunkel",
+    "Sehr dunkel",
+    "Elfisch",
+    "Drow",
+    "Tiefling"
+  ],
+
+  "tattoos": [
+    "Keine",
+    "Tattoo 1",
+    "Tattoo 2",
+    "Tattoo 3",
+    "Tattoo 4",
+    "Tattoo 5"
+  ],
+
+  "scars": [
+    "Keine",
+    "Narbe 1",
+    "Narbe 2",
+    "Narbe 3",
+    "Narbe 4"
+  ],
+
+  "piercings": [
+    "Keine",
+    "Ohrpiercing",
+    "Nasenpiercing",
+    "Gesichtspiercing"
+  ],
+
+  "makeup": [
+    "Keines",
+    "Make-up 1",
+    "Make-up 2",
+    "Make-up 3",
+    "Make-up 4"
   ]
 }
