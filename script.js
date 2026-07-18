@@ -191,7 +191,27 @@ function generateAppearance(race) {
     };
 
 }
+function generateDescription(player) {
 
+    const raceDescriptions =
+        data.descriptions.races[player.race];
+
+
+    const classDescriptions =
+        data.descriptions.classes[player.class];
+
+
+    const raceText =
+        random(raceDescriptions);
+
+
+    const classText =
+        random(classDescriptions);
+
+
+    return `${raceText} ${classText}`;
+
+}
 
 
 
@@ -211,45 +231,49 @@ function generatePlayer(usedRomances = []) {
 
 
 
-    return {
+   const player = {
+
+    origin:
+        origin.name,
 
 
-        origin:
-            origin.name,
+    race:
+        race.race,
 
 
-        race:
-            race.race,
+    subrace:
+        race.subrace,
 
 
-        subrace:
-            race.subrace,
+    class:
+        characterClass.class,
 
 
-        class:
-            characterClass.class,
+    subclass:
+        characterClass.subclass,
 
 
-        subclass:
-            characterClass.subclass,
+    background:
+        random(data.backgrounds.backgrounds),
 
 
-        background:
-            random(data.backgrounds.backgrounds),
+    romance:
+        generateRomance(usedRomances),
 
 
-       romance:
-    generateRomance(usedRomances),
+    appearance:
+        generateAppearance(race.race)
+
+};
 
 
-     appearance:
-    generateAppearance(race.race)
+
+player.description =
+    generateDescription(player);
 
 
-    };
 
-}
-
+return player;
 
 
 
