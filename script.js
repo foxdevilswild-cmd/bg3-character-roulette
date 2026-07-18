@@ -330,7 +330,11 @@ function renderPlayer(player, container) {
             <span class="value">${player.romance}</span>
         </div>
 
+<div class="description">
 
+${player.description}
+
+</div>
 
         <hr>
 
