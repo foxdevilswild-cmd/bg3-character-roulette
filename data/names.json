@@ -1,0 +1,78 @@
+{
+  "Elf": [
+    "Aelira",
+    "Sylvaris",
+    "Letharion",
+    "Nymeris"
+  ],
+
+  "Tiefling": [
+    "Zariel",
+    "Kaelis",
+    "Veyra",
+    "Ravion"
+  ],
+
+  "Drow": [
+    "Zilvrae",
+    "Veldrin",
+    "Sszindra",
+    "Draven"
+  ],
+
+  "Mensch": [
+    "Cassian",
+    "Elara",
+    "Rowan",
+    "Lydia"
+  ],
+
+  "Githyanki": [
+    "Vlaak",
+    "Zerth",
+    "Kith",
+    "Varak"
+  ],
+
+  "Zwerg": [
+    "Borin",
+    "Dagna",
+    "Thorin",
+    "Kelda"
+  ],
+
+  "Halb-Elf": [
+    "Arannis",
+    "Lyra",
+    "Kaelen",
+    "Seraph"
+  ],
+
+  "Halbling": [
+    "Milo",
+    "Tessa",
+    "Perrin",
+    "Nella"
+  ],
+
+  "Gnom": [
+    "Fizzwick",
+    "Tilda",
+    "Nim",
+    "Bramble"
+  ],
+
+  "Drachenblütiger": [
+    "Arjhan",
+    "Balasar",
+    "Kava",
+    "Rhogar"
+  ],
+
+  "Halb-Ork": [
+    "Grush",
+    "Korga",
+    "Morga",
+    "Thokk"
+  ]
+}
