@@ -981,3 +981,23 @@ transform:scale(1);
 }
 
 }
+/* =========================================================
+   CHARACTER NAME
+========================================================= */
+
+
+.character-name{
+
+text-align:center;
+
+font-family:"Cinzel",serif;
+
+font-size:2rem;
+
+color:var(--gold);
+
+letter-spacing:2px;
+
+margin-bottom:15px;
+
+}
