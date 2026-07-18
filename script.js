@@ -1,386 +1,244 @@
-/*
-==========================================================
-BG3 CHARACTER ROULETTE
-Version 1.0
-Teil 1
-NICHT EINFÜGEN
-Warten bis ich "ENDE SCRIPT.JS" schreibe.
-==========================================================
-*/
+let data = {};
 
-const DATA = {};
-
-const CONFIG = {
-
-    players:2,
-
-    animationSpeed:60,
-
-    animationSteps:10
-
-};
-
-async function loadJSON(file){
-
+async function loadJSON(file) {
     const response = await fetch(file);
-
-    if(!response.ok){
-
-        throw new Error("Datei konnte nicht geladen werden: " + file);
-
-    }
-
     return await response.json();
+}
+
+async function loadAllData() {
+    const [
+        appearance,
+        backgrounds,
+        classes,
+        origins,
+        races,
+        romances
+    ] = await Promise.all([
+        loadJSON("data/appearance.json"),
+        loadJSON("data/backgrounds.json"),
+        loadJSON("data/classes.json"),
+        loadJSON("data/origins.json"),
+        loadJSON("data/races.json"),
+        loadJSON("data/romances.json")
+    ]);
+
+    data = {
+        appearance,
+        backgrounds,
+        classes,
+        origins,
+        races,
+        romances
+    };
+}
+
+
+function random(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+
+function randomRace() {
+    const race = random(data.races.races);
+
+    let subrace = null;
+
+    if (race.subraces.length > 0) {
+        subrace = random(race.subraces);
+    }
+
+    return {
+        race: race.name,
+        subrace
+    };
+}
+
+
+function randomClass() {
+    const characterClass = random(data.classes.classes);
+
+    return {
+        class: characterClass.name,
+        subclass: random(characterClass.subclasses)
+    };
+}
+
+
+function generateAppearance() {
+
+    return {
+        gender: random(data.appearance.gender),
+        bodyType: random(data.appearance.bodyTypes),
+        voice: random(data.appearance.voices),
+        face: random(data.appearance.faces),
+        hairstyle: random(data.appearance.hairstyles),
+        hairColor: random(data.appearance.hairColors),
+        eyeColor: random(data.appearance.eyeColors),
+        skinColor: random(data.appearance.skinColors),
+        tattoo: random(data.appearance.tattoos),
+        scars: random(data.appearance.scars),
+        piercing: random(data.appearance.piercings),
+        makeup: random(data.appearance.makeup)
+    };
 
 }
 
-async function loadAllData(){
 
-    DATA.races = await loadJSON("data/races.json");
+function generatePlayer() {
 
-    DATA.classes = await loadJSON("data/classes.json");
+    const origin = random(data.origins.origins);
 
-    DATA.backgrounds = await loadJSON("data/backgrounds.json");
+    let race;
+    let characterClass;
 
-    DATA.appearance = await loadJSON("data/appearance.json");
 
-    DATA.voices = await loadJSON("data/voices.json");
+    if (origin.fixed) {
 
-    DATA.faces = await loadJSON("data/faces.json");
+        race = {
+            race: origin.race,
+            subrace: origin.subrace
+        };
 
-    DATA.hairstyles = await loadJSON("data/hairstyles.json");
+        characterClass = {
+            class: origin.class,
+            subclass: "Zufällig"
+        };
 
-    DATA.features = await loadJSON("data/raceFeatures.json");
+    } else {
 
-    DATA.origins = await loadJSON("data/origins.json");
-
-    DATA.romances = await loadJSON("data/romances.json");
-
-    DATA.deities = await loadJSON("data/deities.json");
-
-}
-
-function random(array){
-
-    return array[Math.floor(Math.random()*array.length)];
-
-}
-
-function set(id,value){
-
-    const element=document.getElementById(id);
-
-    if(element){
-
-        element.textContent=value;
+        race = randomRace();
+        characterClass = randomClass();
 
     }
 
-}
 
-function getRaceFeatures(raceName){
+    return {
 
-    return DATA.features[raceName] || {};
+        origin: origin.name,
 
-}
+        race: race.race,
+        subrace: race.subrace,
 
-function getRandomRace(){
+        class: characterClass.class,
+        subclass: characterClass.subclass,
 
-    return random(DATA.races.races);
+        background: random(data.backgrounds.backgrounds),
 
-}
+        romance: random(data.romances.romances),
 
-function getRandomClass(){
-
-    return random(DATA.classes.classes);
-
-}
-
-function getRandomBackground(){
-
-    return random(DATA.backgrounds.backgrounds);
-
-}
-
-function getRandomOrigin(){
-
-    return random(DATA.origins.origins);
-
-}
-
-function getRandomRomance(){
-
-    return random(DATA.romances.romances);
-
-}
-
-function getRandomDeity(){
-
-    return random(DATA.deities.deities);
-
-}function randomAppearance(race){
-
-    const features = getRaceFeatures(race.name);
-
-    return{
-
-        gender:random(DATA.appearance.appearance.genders),
-
-        bodyType:random(race.bodyTypes),
-
-        voice:random(DATA.voices.voices),
-
-        face:random(DATA.faces.faces),
-
-        hair:random(DATA.hairstyles.hairstyles),
-
-        hairColor:random(DATA.appearance.appearance.hairColors),
-
-        eyeColor:random(DATA.appearance.appearance.eyeColors),
-
-        skinColor:random(DATA.appearance.appearance.skinTones),
-
-        tattoo:random(DATA.appearance.appearance.tattoos),
-
-        scar:random(DATA.appearance.appearance.scars),
-
-        piercing:random(DATA.appearance.appearance.piercings),
-
-        makeup:random(DATA.appearance.appearance.makeup),
-
-        horns:features.horns
-            ? random(DATA.appearance.horns)
-            : "—",
-
-        tail:features.tail
-            ? random(DATA.appearance.tails)
-            : "—"
+        appearance: generateAppearance()
 
     };
 
 }
 
-function createCharacter(){
 
-    return{
+function renderPlayer(player, container) {
 
-        origin:null,
+    container.innerHTML = `
 
-        race:null,
+        <div class="origin-badge">
+            ${player.origin}
+        </div>
 
-        subrace:null,
+        <h2>${player.origin}</h2>
 
-        playerClass:null,
+        <p><strong>Rasse:</strong> ${player.race}</p>
 
-        subclass:null,
-
-        background:null,
-
-        deity:"—",
-
-        romance:null,
-
-        appearance:null
-
-    };
-
-}
-
-function generatePlayer(number){
-
-    const character=createCharacter();
-
-    character.origin=getRandomOrigin();
-
-    character.race=getRandomRace();
-
-    character.subrace=random(character.race.subraces);
-
-    character.playerClass=getRandomClass();
-
-    character.subclass=random(character.playerClass.subclasses);
-
-    character.background=getRandomBackground();
-
-    character.romance=getRandomRomance();
-
-    character.appearance=randomAppearance(character.race);
-
-    if(character.playerClass.name==="Kleriker"){
-
-        character.deity=getRandomDeity();
-
-    }
-
-    set("origin"+number,character.origin.name);
-
-    set("race"+number,character.race.name);
-
-    set("subrace"+number,character.subrace);
-
-    set("class"+number,character.playerClass.name);
-
-    set("subclass"+number,character.subclass);
-
-    set("background"+number,character.background.name);
-
-    set("deity"+number,character.deity);
-
-    set("gender"+number,character.appearance.gender);
-
-    set("bodytype"+number,character.appearance.bodyType);
-
-    set("voice"+number,character.appearance.voice);
-
-    set("face"+number,character.appearance.face);
-
-    set("hair"+number,character.appearance.hair);
-
-    set("hairColor"+number,character.appearance.hairColor);
-
-    set("eyeColor"+number,character.appearance.eyeColor);
-
-    set("skinColor"+number,character.appearance.skinColor);
-
-    set("tattoo"+number,character.appearance.tattoo);
-
-    set("scar"+number,character.appearance.scar);
-
-    set("piercing"+number,character.appearance.piercing);
-
-    set("makeup"+number,character.appearance.makeup);
-
-    set("romance"+number,character.romance);
-
-}function roll(){
-
-    for(let i=1;i<=CONFIG.players;i++){
-
-        generatePlayer(i);
-
-    }
-
-}
-
-function animateRoll(){
-
-    const values=document.querySelectorAll(".value");
-
-    let counter=0;
-
-    const interval=setInterval(()=>{
-
-        values.forEach(value=>{
-
-            value.textContent="🎲";
-
-        });
-
-        counter++;
-
-        if(counter>=CONFIG.animationSteps){
-
-            clearInterval(interval);
-
-            roll();
-
+        ${
+            player.subrace
+            ? `<p><strong>Unterrasse:</strong> ${player.subrace}</p>`
+            : ""
         }
 
-    },CONFIG.animationSpeed);
+        <p><strong>Klasse:</strong> ${player.class}</p>
+
+        <p><strong>Unterklasse:</strong> ${player.subclass}</p>
+
+        <p><strong>Hintergrund:</strong> ${player.background}</p>
+
+        <p><strong>Romanze:</strong> ${player.romance}</p>
+
+
+        <hr>
+
+
+        <p><strong>Geschlecht:</strong> ${player.appearance.gender}</p>
+
+        <p><strong>Körper:</strong> ${player.appearance.bodyType}</p>
+
+        <p><strong>Stimme:</strong> ${player.appearance.voice}</p>
+
+        <p><strong>Gesicht:</strong> ${player.appearance.face}</p>
+
+        <p><strong>Frisur:</strong> ${player.appearance.hairstyle}</p>
+
+        <p><strong>Haarfarbe:</strong> ${player.appearance.hairColor}</p>
+
+        <p><strong>Augenfarbe:</strong> ${player.appearance.eyeColor}</p>
+
+        <p><strong>Hautfarbe:</strong> ${player.appearance.skinColor}</p>
+
+        <p><strong>Tattoo:</strong> ${player.appearance.tattoo}</p>
+
+        <p><strong>Narben:</strong> ${player.appearance.scars}</p>
+
+        <p><strong>Piercing:</strong> ${player.appearance.piercing}</p>
+
+        <p><strong>Make-up:</strong> ${player.appearance.makeup}</p>
+
+    `;
+}
+
+
+function animateRoll() {
+
+    const button = document.querySelector("#rollButton");
+
+    button.classList.add("rolling");
+
+    setTimeout(() => {
+        button.classList.remove("rolling");
+    }, 700);
 
 }
 
-function bindEvents(){
 
-    const button=document.getElementById("rollButton");
+function roll() {
 
-    button.addEventListener("click",()=>{
+    animateRoll();
 
-        button.disabled=true;
 
-        animateRoll();
+    const playerOne = generatePlayer();
+    const playerTwo = generatePlayer();
 
-        setTimeout(()=>{
 
-            button.disabled=false;
+    renderPlayer(
+        playerOne,
+        document.querySelector("#playerOne")
+    );
 
-        },CONFIG.animationSteps*CONFIG.animationSpeed+100);
 
-    });
-
-}
-
-function validateData(){
-
-    console.log("===== BG3 Character Roulette =====");
-
-    console.log(DATA);
-
-    if(!DATA.races){
-
-        throw new Error("races.json wurde nicht geladen.");
-
-    }
-
-    if(!DATA.classes){
-
-        throw new Error("classes.json wurde nicht geladen.");
-
-    }
-
-    if(!DATA.backgrounds){
-
-        throw new Error("backgrounds.json wurde nicht geladen.");
-
-    }
-
-    if(!DATA.appearance){
-
-        throw new Error("appearance.json wurde nicht geladen.");
-
-    }
-
-    if(!DATA.origins){
-
-        throw new Error("origins.json wurde nicht geladen.");
-
-    }
-
-    if(!DATA.romances){
-
-        throw new Error("romances.json wurde nicht geladen.");
-
-    }
+    renderPlayer(
+        playerTwo,
+        document.querySelector("#playerTwo")
+    );
 
 }
 
-async function init(){
 
-    try{
+async function init() {
 
-        await loadAllData();
+    await loadAllData();
 
-        validateData();
-
-        bindEvents();
-
-        roll();
-
-        console.log("Generator erfolgreich gestartet.");
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-        alert(
-            "Beim Laden der Daten ist ein Fehler aufgetreten.\n\n"+
-            "Öffne die Konsole (F12), um die genaue Ursache zu sehen."
+    document
+        .querySelector("#rollButton")
+        .addEventListener(
+            "click",
+            roll
         );
 
-    }
-
 }
 
-document.addEventListener("DOMContentLoaded",init);
+
+init();
