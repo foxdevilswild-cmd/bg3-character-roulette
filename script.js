@@ -114,42 +114,69 @@ function generateClass() {
 
 
 
-function generateAppearance() {
+function generateAppearance(race) {
+
+    const raceData =
+        data.appearance.raceAppearance[race];
+
 
     return {
 
         gender:
             random(data.appearance.gender),
 
+
         bodyType:
             random(data.appearance.bodyTypes),
+
 
         voice:
             random(data.appearance.voices),
 
+
         face:
             random(data.appearance.faces),
+
 
         hairstyle:
             random(data.appearance.hairstyles),
 
+
         hairColor:
-            random(data.appearance.hairColors),
+            raceData
+            ?
+            random(raceData.hairColors)
+            :
+            "Beliebig",
+
 
         eyeColor:
-            random(data.appearance.eyeColors),
+            raceData
+            ?
+            random(raceData.eyeColors)
+            :
+            "Beliebig",
+
 
         skinColor:
-            random(data.appearance.skinColors),
+            raceData
+            ?
+            random(raceData.skinColors)
+            :
+            "Beliebig",
+
 
         tattoo:
             random(data.appearance.tattoos),
 
+
         scars:
             random(data.appearance.scars),
 
+
         piercing:
             random(data.appearance.piercings),
+
 
         makeup:
             random(data.appearance.makeup)
@@ -208,8 +235,8 @@ function generatePlayer(usedRomances = []) {
     generateRomance(usedRomances),
 
 
-        appearance:
-            generateAppearance()
+     appearance:
+    generateAppearance(race.race)
 
 
     };
