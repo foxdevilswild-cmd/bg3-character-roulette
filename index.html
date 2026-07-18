@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BG3 Character Roulette</title>
 
     <link rel="stylesheet" href="style.css">
@@ -13,16 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
 
 <div class="background-overlay"></div>
+
 
 <header class="hero">
 
     <div class="hero-content">
 
         <p class="version">
-            Version 1.0 Alpha
+            Version 1.0
         </p>
 
         <h1>
@@ -34,23 +38,27 @@
         </h2>
 
         <p class="subtitle">
-            Würfle einen komplett zufälligen Charakter
+            Erstelle zwei zufällige Charaktere
             für deinen nächsten Durchlauf.
         </p>
+
 
         <button id="rollButton">
             🎲 Charakter würfeln
         </button>
+
 
     </div>
 
 </header>
 
 
+
 <main class="container">
 
 
 <section class="players-grid">
+
 
 
 <article class="character-card">
@@ -68,234 +76,11 @@ Spieler 1
 </div>
 
 
-<div class="card-body">
+<div class="card-body" id="playerOne">
 
 <div class="attribute">
-
-<span class="label">
-Rasse
-</span>
-
-<span class="value" id="race1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Unterrasse
-</span>
-
-<span class="value" id="subrace1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Klasse
-</span>
-
-<span class="value" id="class1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Unterklasse
-
-<div class="attribute">
-
-<span class="label">
-Gottheit
-</span>
-
-<span class="value" id="deity1">
-—
-</span>
-
-</div>
-</span>
-
-<span class="value" id="subclass1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Hintergrund
-</span>
-
-<span class="value" id="background1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Geschlecht
-</span>
-
-<span class="value" id="gender1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Körpertyp
-</span>
-
-<span class="value" id="bodytype1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Stimme
-</span>
-
-<span class="value" id="voice1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Gesicht
-</span>
-
-<span class="value" id="face1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Frisur
-</span>
-
-<span class="value" id="hair1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Haarfarbe
-</span>
-
-<span class="value" id="hairColor1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Augenfarbe
-</span>
-
-<span class="value" id="eyeColor1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Hautfarbe
-</span>
-
-<span class="value" id="skinColor1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Tattoo
-</span>
-
-<span class="value" id="tattoo1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Narben
-
-    <div class="attribute">
-
-<span class="label">
-Piercing
-</span>
-
-<span class="value" id="piercing1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Make-up
-</span>
-
-<span class="value" id="makeup1">
--
-</span>
-
-</div>
-
-<div class="attribute">
-
-<span class="label">
-Romanze
-</span>
-
-<span class="value" id="romance1">
--
-</span>
-
-</div>
-</span>
-
-<span class="value" id="scar1">
--
-</span>
-
+<span class="label">Bereit</span>
+<span class="value">Charakter würfeln</span>
 </div>
 
 </div>
@@ -320,47 +105,21 @@ Spieler 2
 
 </div>
 
-<div class="card-body">
 
-<div class="attribute"><span class="label">Rasse</span><span class="value" id="race2">-</span></div>
+<div class="card-body" id="playerTwo">
 
-<div class="attribute"><span class="label">Unterrasse</span><span class="value" id="subrace2">-</span></div>
+<div class="attribute">
+<span class="label">Bereit</span>
+<span class="value">Charakter würfeln</span>
+</div>
 
-<div class="attribute"><span class="label">Klasse</span><span class="value" id="class2">-</span></div>
-
-<div class="attribute"><span class="label">Unterklasse</span><span class="value" id="subclass2">-</span></div>
-
-<div class="attribute"><span class="label">Hintergrund</span><span class="value" id="background2">-</span></div>
-
-<div class="attribute"><span class="label">Geschlecht</span><span class="value" id="gender2">-</span></div>
-
-<div class="attribute"><span class="label">Körpertyp</span><span class="value" id="bodytype2">-</span></div>
-
-<div class="attribute"><span class="label">Stimme</span><span class="value" id="voice2">-</span></div>
-
-<div class="attribute"><span class="label">Gesicht</span><span class="value" id="face2">-</span></div>
-
-<div class="attribute"><span class="label">Frisur</span><span class="value" id="hair2">-</span></div>
-
-<div class="attribute"><span class="label">Haarfarbe</span><span class="value" id="hairColor2">-</span></div>
-
-<div class="attribute"><span class="label">Augenfarbe</span><span class="value" id="eyeColor2">-</span></div>
-
-<div class="attribute"><span class="label">Hautfarbe</span><span class="value" id="skinColor2">-</span></div>
-
-<div class="attribute"><span class="label">Tattoo</span><span class="value" id="tattoo2">-</span></div>
-
-<div class="attribute"><span class="label">Narben</span><span class="value" id="scar2">-</span></div>
-
-    <div class="attribute"><span class="label">Piercing</span><span class="value" id="piercing2">-</span></div>
-
-<div class="attribute"><span class="label">Make-up</span><span class="value" id="makeup2">-</span></div>
-
-<div class="attribute"><span class="label">Romanze</span><span class="value" id="romance2">-</span></div>
-<div class="attribute"><span class="label">Gottheit</span><span class="value" id="deity2">—</span></div>
 </div>
 
 </article>
+
+
+
+</section>
 
 
 </main>
@@ -376,7 +135,10 @@ BG3 Character Roulette · Fanprojekt · Nicht mit Larian Studios verbunden
 </footer>
 
 
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
