@@ -326,34 +326,38 @@ align-items:start;
 background:
 linear-gradient(
 180deg,
-rgba(43,38,33,.96),
-rgba(23,20,18,.96)
+#2d2823,
+#1d1a17
 );
 
-border:1px solid rgba(198,165,91,.35);
+border:1px solid rgba(198,165,91,.45);
 
-border-radius:14px;
+border-radius:16px;
 
 overflow:hidden;
 
 box-shadow:
-0 18px 40px rgba(0,0,0,.45);
+0 20px 45px rgba(0,0,0,.55);
 
 transition:
 transform .25s,
 box-shadow .25s,
 border-color .25s;
 
+position:relative;
+
 }
 
 .character-card:hover{
 
-transform:translateY(-6px);
+transform:translateY(-8px);
 
 border-color:var(--gold);
 
 box-shadow:
-0 28px 55px rgba(0,0,0,.60);
+
+0 30px 60px rgba(0,0,0,.70),
+0 0 20px rgba(198,165,91,.12);
 
 }
 
