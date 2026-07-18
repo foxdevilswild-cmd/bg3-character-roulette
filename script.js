@@ -1,11 +1,18 @@
 let data = {};
 
+
 async function loadJSON(file) {
+
     const response = await fetch(file);
+
     return await response.json();
+
 }
 
+
+
 async function loadAllData() {
+
     const [
         appearance,
         backgrounds,
@@ -14,231 +21,417 @@ async function loadAllData() {
         races,
         romances
     ] = await Promise.all([
+
         loadJSON("data/appearance.json"),
         loadJSON("data/backgrounds.json"),
         loadJSON("data/classes.json"),
         loadJSON("data/origins.json"),
         loadJSON("data/races.json"),
         loadJSON("data/romances.json")
+
     ]);
 
+
     data = {
+
         appearance,
         backgrounds,
         classes,
         origins,
         races,
         romances
+
     };
+
 }
+
+
 
 
 function random(array) {
+
     return array[Math.floor(Math.random() * array.length)];
+
 }
 
 
-function randomRace() {
+
+
+function generateRace() {
+
     const race = random(data.races.races);
+
 
     let subrace = null;
 
+
     if (race.subraces.length > 0) {
+
         subrace = random(race.subraces);
+
     }
 
+
     return {
+
         race: race.name,
-        subrace
+        subrace: subrace
+
     };
+
 }
 
 
-function randomClass() {
-    const characterClass = random(data.classes.classes);
+
+
+function generateClass() {
+
+    const characterClass =
+        random(data.classes.classes);
+
 
     return {
+
         class: characterClass.name,
-        subclass: random(characterClass.subclasses)
+
+        subclass:
+            random(characterClass.subclasses)
+
     };
+
 }
+
+
 
 
 function generateAppearance() {
 
     return {
-        gender: random(data.appearance.gender),
-        bodyType: random(data.appearance.bodyTypes),
-        voice: random(data.appearance.voices),
-        face: random(data.appearance.faces),
-        hairstyle: random(data.appearance.hairstyles),
-        hairColor: random(data.appearance.hairColors),
-        eyeColor: random(data.appearance.eyeColors),
-        skinColor: random(data.appearance.skinColors),
-        tattoo: random(data.appearance.tattoos),
-        scars: random(data.appearance.scars),
-        piercing: random(data.appearance.piercings),
-        makeup: random(data.appearance.makeup)
+
+        gender:
+            random(data.appearance.gender),
+
+        bodyType:
+            random(data.appearance.bodyTypes),
+
+        voice:
+            random(data.appearance.voices),
+
+        face:
+            random(data.appearance.faces),
+
+        hairstyle:
+            random(data.appearance.hairstyles),
+
+        hairColor:
+            random(data.appearance.hairColors),
+
+        eyeColor:
+            random(data.appearance.eyeColors),
+
+        skinColor:
+            random(data.appearance.skinColors),
+
+        tattoo:
+            random(data.appearance.tattoos),
+
+        scars:
+            random(data.appearance.scars),
+
+        piercing:
+            random(data.appearance.piercings),
+
+        makeup:
+            random(data.appearance.makeup)
+
     };
 
 }
+
+
 
 
 function generatePlayer() {
 
-    const origin = random(data.origins.origins);
 
-    let race;
-    let characterClass;
+    const origin =
+        random(data.origins.origins);
 
 
-    if (origin.fixed) {
+    const race =
+        generateRace();
 
-        race = {
-            race: origin.race,
-            subrace: origin.subrace
-        };
 
-        characterClass = {
-            class: origin.class,
-            subclass: "Zufällig"
-        };
+    const characterClass =
+        generateClass();
 
-    } else {
-
-        race = randomRace();
-        characterClass = randomClass();
-
-    }
 
 
     return {
 
-        origin: origin.name,
 
-        race: race.race,
-        subrace: race.subrace,
+        origin:
+            origin.name,
 
-        class: characterClass.class,
-        subclass: characterClass.subclass,
 
-        background: random(data.backgrounds.backgrounds),
+        race:
+            race.race,
 
-        romance: random(data.romances.romances),
 
-        appearance: generateAppearance()
+        subrace:
+            race.subrace,
+
+
+        class:
+            characterClass.class,
+
+
+        subclass:
+            characterClass.subclass,
+
+
+        background:
+            random(data.backgrounds.backgrounds),
+
+
+        romance:
+            random(data.romances.romances),
+
+
+        appearance:
+            generateAppearance()
+
 
     };
 
 }
 
 
+
+
 function renderPlayer(player, container) {
+
 
     container.innerHTML = `
 
-        <div class="origin-badge">
-            ${player.origin}
+
+        <div class="attribute">
+            <span class="label">Rasse</span>
+            <span class="value">${player.race}</span>
         </div>
 
-        <h2>${player.origin}</h2>
-
-        <p><strong>Rasse:</strong> ${player.race}</p>
 
         ${
             player.subrace
-            ? `<p><strong>Unterrasse:</strong> ${player.subrace}</p>`
-            : ""
+            ?
+            `
+            <div class="attribute">
+                <span class="label">Unterrasse</span>
+                <span class="value">${player.subrace}</span>
+            </div>
+            `
+            :
+            ""
         }
 
-        <p><strong>Klasse:</strong> ${player.class}</p>
 
-        <p><strong>Unterklasse:</strong> ${player.subclass}</p>
 
-        <p><strong>Hintergrund:</strong> ${player.background}</p>
+        <div class="attribute">
+            <span class="label">Klasse</span>
+            <span class="value">${player.class}</span>
+        </div>
 
-        <p><strong>Romanze:</strong> ${player.romance}</p>
+
+
+        <div class="attribute">
+            <span class="label">Unterklasse</span>
+            <span class="value">${player.subclass}</span>
+        </div>
+
+
+
+        <div class="attribute">
+            <span class="label">Hintergrund</span>
+            <span class="value">${player.background}</span>
+        </div>
+
+
+
+        <div class="attribute">
+            <span class="label">Romanze</span>
+            <span class="value">${player.romance}</span>
+        </div>
+
 
 
         <hr>
 
 
-        <p><strong>Geschlecht:</strong> ${player.appearance.gender}</p>
 
-        <p><strong>Körper:</strong> ${player.appearance.bodyType}</p>
+        <div class="attribute">
+            <span class="label">Geschlecht</span>
+            <span class="value">${player.appearance.gender}</span>
+        </div>
 
-        <p><strong>Stimme:</strong> ${player.appearance.voice}</p>
 
-        <p><strong>Gesicht:</strong> ${player.appearance.face}</p>
+        <div class="attribute">
+            <span class="label">Körpertyp</span>
+            <span class="value">${player.appearance.bodyType}</span>
+        </div>
 
-        <p><strong>Frisur:</strong> ${player.appearance.hairstyle}</p>
 
-        <p><strong>Haarfarbe:</strong> ${player.appearance.hairColor}</p>
+        <div class="attribute">
+            <span class="label">Stimme</span>
+            <span class="value">${player.appearance.voice}</span>
+        </div>
 
-        <p><strong>Augenfarbe:</strong> ${player.appearance.eyeColor}</p>
 
-        <p><strong>Hautfarbe:</strong> ${player.appearance.skinColor}</p>
+        <div class="attribute">
+            <span class="label">Gesicht</span>
+            <span class="value">${player.appearance.face}</span>
+        </div>
 
-        <p><strong>Tattoo:</strong> ${player.appearance.tattoo}</p>
 
-        <p><strong>Narben:</strong> ${player.appearance.scars}</p>
+        <div class="attribute">
+            <span class="label">Frisur</span>
+            <span class="value">${player.appearance.hairstyle}</span>
+        </div>
 
-        <p><strong>Piercing:</strong> ${player.appearance.piercing}</p>
 
-        <p><strong>Make-up:</strong> ${player.appearance.makeup}</p>
+        <div class="attribute">
+            <span class="label">Haarfarbe</span>
+            <span class="value">${player.appearance.hairColor}</span>
+        </div>
+
+
+        <div class="attribute">
+            <span class="label">Augenfarbe</span>
+            <span class="value">${player.appearance.eyeColor}</span>
+        </div>
+
+
+        <div class="attribute">
+            <span class="label">Hautfarbe</span>
+            <span class="value">${player.appearance.skinColor}</span>
+        </div>
+
+
+        <div class="attribute">
+            <span class="label">Tattoo</span>
+            <span class="value">${player.appearance.tattoo}</span>
+        </div>
+
+
+        <div class="attribute">
+            <span class="label">Narben</span>
+            <span class="value">${player.appearance.scars}</span>
+        </div>
+
+
+        <div class="attribute">
+            <span class="label">Piercing</span>
+            <span class="value">${player.appearance.piercing}</span>
+        </div>
+
+
+        <div class="attribute">
+            <span class="label">Make-up</span>
+            <span class="value">${player.appearance.makeup}</span>
+        </div>
+
 
     `;
+
+
 }
+
+
+
 
 
 function animateRoll() {
 
-    const button = document.querySelector("#rollButton");
+
+    const button =
+        document.querySelector("#rollButton");
+
 
     button.classList.add("rolling");
 
+
     setTimeout(() => {
+
         button.classList.remove("rolling");
-    }, 700);
+
+    },700);
+
 
 }
+
+
 
 
 function roll() {
 
+
     animateRoll();
 
 
-    const playerOne = generatePlayer();
-    const playerTwo = generatePlayer();
+    const playerOne =
+        generatePlayer();
+
+
+    const playerTwo =
+        generatePlayer();
+
 
 
     renderPlayer(
+
         playerOne,
+
         document.querySelector("#playerOne")
+
     );
+
 
 
     renderPlayer(
+
         playerTwo,
+
         document.querySelector("#playerTwo")
+
     );
+
 
 }
+
+
 
 
 async function init() {
 
+
     await loadAllData();
 
+
+
     document
+
         .querySelector("#rollButton")
+
         .addEventListener(
+
             "click",
+
             roll
+
         );
 
+
 }
+
 
 
 init();
