@@ -277,7 +277,34 @@ player.description =
 
 }
 
+function renderSummary(player, container) {
 
+
+    container.innerHTML = `
+
+
+        <h3>
+            ${player.name || "Abenteurer"}
+        </h3>
+
+
+        <p>
+            ${player.race}
+            ·
+            ${player.class}
+        </p>
+
+
+        <p>
+            Romanze:
+            <strong>${player.romance}</strong>
+        </p>
+
+
+    `;
+
+
+}
 
 function renderPlayer(player, container) {
 
