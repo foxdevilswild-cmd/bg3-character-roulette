@@ -363,9 +363,11 @@ function renderPlayer(player, container) {
 
         <div class="description">
 
+    <p>
         ${player.description}
+    </p>
 
-        </div>
+</div>
 
 
 
