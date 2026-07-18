@@ -3,42 +3,58 @@
     {
       "name": "Tav",
       "fixedRace": null,
-      "fixedClass": null
+      "fixedSubrace": null,
+      "fixedClass": null,
+      "fixedBackground": null
     },
     {
       "name": "Dark Urge",
       "fixedRace": null,
-      "fixedClass": null
+      "fixedSubrace": null,
+      "fixedClass": null,
+      "fixedBackground": "Gezeichnete Seele"
     },
     {
       "name": "Astarion",
-      "fixedRace": "Hochelf",
-      "fixedClass": "Schurke"
-    },
-    {
-      "name": "Shadowheart",
-      "fixedRace": "Halbelf",
-      "fixedClass": "Kleriker"
+      "fixedRace": "Elf",
+      "fixedSubrace": "Hochelf",
+      "fixedClass": "Schurke",
+      "fixedBackground": "Adliger"
     },
     {
       "name": "Gale",
       "fixedRace": "Mensch",
-      "fixedClass": "Magier"
-    },
-    {
-      "name": "Wyll",
-      "fixedRace": "Mensch",
-      "fixedClass": "Hexenmeister"
+      "fixedSubrace": "Keine",
+      "fixedClass": "Magier",
+      "fixedBackground": "Weiser"
     },
     {
       "name": "Karlach",
-      "fixedRace": "Zariel-Tiefling",
-      "fixedClass": "Barbar"
+      "fixedRace": "Tiefling",
+      "fixedSubrace": "Zariel",
+      "fixedClass": "Barbar",
+      "fixedBackground": "Ausgestoßene"
     },
     {
       "name": "Lae'zel",
       "fixedRace": "Githyanki",
-      "fixedClass": "Kämpfer"
+      "fixedSubrace": "Keine",
+      "fixedClass": "Kämpfer",
+      "fixedBackground": "Soldat"
+    },
+    {
+      "name": "Shadowheart",
+      "fixedRace": "Halbelf",
+      "fixedSubrace": "Hochelf",
+      "fixedClass": "Kleriker",
+      "fixedBackground": "Akolyth"
+    },
+    {
+      "name": "Wyll",
+      "fixedRace": "Mensch",
+      "fixedSubrace": "Keine",
+      "fixedClass": "Hexenmeister",
+      "fixedBackground": "Volksheld"
     }
   ]
 }
