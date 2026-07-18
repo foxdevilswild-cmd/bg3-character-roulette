@@ -343,9 +343,6 @@ function renderPlayer(player, container) {
         <hr>
 
 
-
-        <div class="attribute">
-            <span class="label">Geschlecht</span>
             <span class="value">${player.appearance.gender}</span>
         </div>
 
