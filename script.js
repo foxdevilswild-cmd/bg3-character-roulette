@@ -275,6 +275,8 @@ console.log(player.description);
 
 return player;
 
+}
+
 
 
 function renderPlayer(player, container) {
