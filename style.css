@@ -253,23 +253,6 @@ position:relative;
 
 }
 
-
-.character-card::before{
-
-content:"✦";
-
-position:absolute;
-
-top:8px;
-
-right:14px;
-
-font-size:1rem;
-
-color:rgba(198,165,91,.5);
-
-}
-
 .character-card:hover{
 
 .character-card{
