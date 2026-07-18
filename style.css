@@ -270,17 +270,35 @@ opacity:.5;
 
 }
 
-
-.character-card:hover {
-
 .character-card:hover{
 
-border-color:var(--gold);
+.character-card{
+
+background:
+
+linear-gradient(
+180deg,
+rgba(43,38,33,.98),
+rgba(20,18,16,.98)
+);
+
+border:
+
+1px solid rgba(198,165,91,.45);
+
+border-radius:14px;
+
+overflow:hidden;
 
 box-shadow:
 
-0 0 30px rgba(198,165,91,.25),
-0 30px 60px rgba(0,0,0,.55);
+0 15px 35px rgba(0,0,0,.55);
+
+transition:.3s;
+
+position:relative;
+
+}
 
 }
 
