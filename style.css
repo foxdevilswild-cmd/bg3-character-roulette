@@ -1050,3 +1050,14 @@ opacity:.5;
 font-size:1.2rem;
 
 }
+#rollButton{
+
+background:red !important;
+
+color:white !important;
+
+font-size:30px !important;
+
+padding:20px !important;
+
+}
