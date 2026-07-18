@@ -271,7 +271,7 @@ function generatePlayer(usedRomances = []) {
 player.description =
     generateDescription(player);
 
-
+console.log(player.description);
 
 return player;
 
