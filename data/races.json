@@ -2,54 +2,36 @@
   "races": [
     {
       "name": "Mensch",
-      "subraces": [
-        "Keine"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
+      "subraces": []
     },
     {
       "name": "Elf",
       "subraces": [
         "Hochelf",
         "Waldelf"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
       ]
     },
     {
       "name": "Drow",
       "subraces": [
-        "Lolth-Verehrer",
+        "Lolth-geschworener Drow",
         "Seldarine-Drow"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
       ]
     },
     {
-      "name": "Halbelf",
+      "name": "Halb-Elf",
       "subraces": [
-        "Hochelf",
-        "Waldelf",
-        "Drow"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
+        "Hochelfen-Halb-Elf",
+        "Waldelfen-Halb-Elf",
+        "Drow-Halb-Elf"
+      ]
+    },
+    {
+      "name": "Tiefling",
+      "subraces": [
+        "Asmodeus-Tiefling",
+        "Mephistopheles-Tiefling",
+        "Zariel-Tiefling"
       ]
     },
     {
@@ -58,62 +40,30 @@
         "Goldzwerg",
         "Schildzwerg",
         "Duergar"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
       ]
     },
     {
       "name": "Halbling",
       "subraces": [
         "Leichtfuß",
-        "Starkherz"
-      ],
-      "bodyTypes": [
-        "1",
-        "2"
+        "Stämmig"
       ]
     },
     {
       "name": "Gnom",
       "subraces": [
-        "Felsengnom",
-        "Waldgnom",
-        "Tiefengnom"
-      ],
-      "bodyTypes": [
-        "1",
-        "2"
+        "Felsen-Gnom",
+        "Wald-Gnom",
+        "Tiefer Gnom"
       ]
     },
     {
-      "name": "Tiefling",
-      "subraces": [
-        "Asmodeus",
-        "Mephistopheles",
-        "Zariel"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
+      "name": "Halb-Ork",
+      "subraces": []
     },
     {
       "name": "Githyanki",
-      "subraces": [
-        "Keine"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
+      "subraces": []
     },
     {
       "name": "Drachenblütiger",
@@ -128,22 +78,6 @@
         "Rot",
         "Silber",
         "Weiß"
-      ],
-      "bodyTypes": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
-    },
-    {
-      "name": "Halbork",
-      "subraces": [
-        "Keine"
-      ],
-      "bodyTypes": [
-        "3",
-        "4"
       ]
     }
   ]
