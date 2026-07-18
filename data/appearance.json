@@ -49,43 +49,248 @@
     "Frisur 10"
   ],
 
-  "hairColors": [
-    "Schwarz",
-    "Dunkelbraun",
-    "Braun",
-    "Hellbraun",
-    "Blond",
-    "Weiß",
-    "Silber",
-    "Rot",
-    "Kupfer",
-    "Blau",
-    "Grün",
-    "Lila"
-  ],
 
-  "eyeColors": [
-    "Braun",
-    "Dunkelbraun",
-    "Blau",
-    "Grün",
-    "Grau",
-    "Gold",
-    "Silber",
-    "Violett",
-    "Rot"
-  ],
+  "raceAppearance": {
 
-  "skinColors": [
-    "Sehr hell",
-    "Hell",
-    "Mittel",
-    "Dunkel",
-    "Sehr dunkel",
-    "Elfisch",
-    "Drow",
-    "Tiefling"
-  ],
+    "Mensch": {
+      "skinColors": [
+        "Sehr hell",
+        "Hell",
+        "Mittel",
+        "Dunkel",
+        "Sehr dunkel"
+      ],
+      "eyeColors": [
+        "Braun",
+        "Blau",
+        "Grün",
+        "Grau"
+      ],
+      "hairColors": [
+        "Schwarz",
+        "Dunkelbraun",
+        "Braun",
+        "Hellbraun",
+        "Blond",
+        "Rot"
+      ]
+    },
+
+
+    "Elf": {
+      "skinColors": [
+        "Sehr hell",
+        "Hell",
+        "Gold",
+        "Bronze"
+      ],
+      "eyeColors": [
+        "Blau",
+        "Grün",
+        "Silber",
+        "Gold"
+      ],
+      "hairColors": [
+        "Silber",
+        "Weiß",
+        "Blond",
+        "Braun",
+        "Schwarz"
+      ]
+    },
+
+
+    "Drow": {
+      "skinColors": [
+        "Violett",
+        "Blaugrau",
+        "Dunkelgrau"
+      ],
+      "eyeColors": [
+        "Rot",
+        "Silber",
+        "Violett"
+      ],
+      "hairColors": [
+        "Weiß",
+        "Silber",
+        "Schwarz"
+      ]
+    },
+
+
+    "Halb-Elf": {
+      "skinColors": [
+        "Sehr hell",
+        "Hell",
+        "Mittel",
+        "Dunkel"
+      ],
+      "eyeColors": [
+        "Blau",
+        "Grün",
+        "Braun",
+        "Silber"
+      ],
+      "hairColors": [
+        "Schwarz",
+        "Braun",
+        "Blond",
+        "Silber",
+        "Rot"
+      ]
+    },
+
+
+    "Tiefling": {
+      "skinColors": [
+        "Rot",
+        "Violett",
+        "Dunkelrot",
+        "Bläulich"
+      ],
+      "eyeColors": [
+        "Gold",
+        "Rot",
+        "Silber",
+        "Schwarz"
+      ],
+      "hairColors": [
+        "Schwarz",
+        "Rot",
+        "Weiß",
+        "Blau",
+        "Violett"
+      ]
+    },
+
+
+    "Zwerg": {
+      "skinColors": [
+        "Hell",
+        "Mittel",
+        "Dunkel"
+      ],
+      "eyeColors": [
+        "Braun",
+        "Blau",
+        "Grün"
+      ],
+      "hairColors": [
+        "Schwarz",
+        "Braun",
+        "Rot",
+        "Grau",
+        "Weiß"
+      ]
+    },
+
+
+    "Halbling": {
+      "skinColors": [
+        "Hell",
+        "Mittel",
+        "Gebräunt"
+      ],
+      "eyeColors": [
+        "Braun",
+        "Grün",
+        "Blau"
+      ],
+      "hairColors": [
+        "Braun",
+        "Schwarz",
+        "Blond",
+        "Rot"
+      ]
+    },
+
+
+    "Gnom": {
+      "skinColors": [
+        "Hell",
+        "Mittel",
+        "Gebräunt"
+      ],
+      "eyeColors": [
+        "Braun",
+        "Grün",
+        "Blau"
+      ],
+      "hairColors": [
+        "Braun",
+        "Rot",
+        "Blond",
+        "Grau"
+      ]
+    },
+
+
+    "Halb-Ork": {
+      "skinColors": [
+        "Grünlich",
+        "Grau",
+        "Braun"
+      ],
+      "eyeColors": [
+        "Braun",
+        "Dunkel",
+        "Rot"
+      ],
+      "hairColors": [
+        "Schwarz",
+        "Braun",
+        "Grau"
+      ]
+    },
+
+
+    "Githyanki": {
+      "skinColors": [
+        "Gold",
+        "Grünlich",
+        "Gelblich"
+      ],
+      "eyeColors": [
+        "Schwarz",
+        "Gold",
+        "Silber"
+      ],
+      "hairColors": [
+        "Schwarz",
+        "Braun",
+        "Weiß",
+        "Rot"
+      ]
+    },
+
+
+    "Drachenblütiger": {
+      "skinColors": [
+        "Rot",
+        "Blau",
+        "Schwarz",
+        "Gold",
+        "Silber",
+        "Grün",
+        "Weiß"
+      ],
+      "eyeColors": [
+        "Gold",
+        "Silber",
+        "Rot",
+        "Blau"
+      ],
+      "hairColors": [
+        "Schwarz",
+        "Weiß",
+        "Silber",
+        "Rot"
+      ]
+    }
+
+  },
+
 
   "tattoos": [
     "Keine",
@@ -96,6 +301,7 @@
     "Tattoo 5"
   ],
 
+
   "scars": [
     "Keine",
     "Narbe 1",
@@ -104,12 +310,14 @@
     "Narbe 4"
   ],
 
+
   "piercings": [
     "Keine",
     "Ohrpiercing",
     "Nasenpiercing",
     "Gesichtspiercing"
   ],
+
 
   "makeup": [
     "Keines",
