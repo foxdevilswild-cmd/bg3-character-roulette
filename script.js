@@ -484,6 +484,8 @@ const usedRomances = [];
 const playerOne =
     generatePlayer(usedRomances);
 
+playerOne.name = "Anni";
+
 
 usedRomances.push(playerOne.romance);
 
@@ -491,6 +493,7 @@ usedRomances.push(playerOne.romance);
 const playerTwo =
     generatePlayer(usedRomances);
 
+playerTwo.name = "Jenny";
 
 
     renderPlayer(
