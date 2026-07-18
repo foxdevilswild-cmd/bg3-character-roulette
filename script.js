@@ -463,20 +463,30 @@ function renderPlayer(player, container) {
 
 function animateRoll() {
 
+    const status =
+        document.querySelector("#rollStatus");
 
-    const button =
-        document.querySelector("#rollButton");
+
+    status.innerHTML =
+        "🎲 Dein Schicksal wird gewürfelt...";
 
 
-    button.classList.add("rolling");
+    status.classList.add("active");
 
 
     setTimeout(() => {
 
-        button.classList.remove("rolling");
+        status.innerHTML =
+            "✨ Dein Charakter steht fest";
 
-    },700);
+    },1200);
 
+
+    setTimeout(() => {
+
+        status.classList.remove("active");
+
+    },2500);
 
 }
 
