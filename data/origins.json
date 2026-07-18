@@ -2,59 +2,53 @@
   "origins": [
     {
       "name": "Tav",
-      "fixedRace": null,
-      "fixedSubrace": null,
-      "fixedClass": null,
-      "fixedBackground": null
+      "fixed": false
     },
     {
       "name": "Dark Urge",
-      "fixedRace": null,
-      "fixedSubrace": null,
-      "fixedClass": null,
-      "fixedBackground": "Gezeichnete Seele"
+      "fixed": false
     },
     {
       "name": "Astarion",
-      "fixedRace": "Elf",
-      "fixedSubrace": "Hochelf",
-      "fixedClass": "Schurke",
-      "fixedBackground": "Adliger"
+      "fixed": true,
+      "race": "Halb-Elf",
+      "subrace": "Hochelfen-Halb-Elf",
+      "class": "Schurke"
     },
     {
       "name": "Gale",
-      "fixedRace": "Mensch",
-      "fixedSubrace": "Keine",
-      "fixedClass": "Magier",
-      "fixedBackground": "Weiser"
+      "fixed": true,
+      "race": "Mensch",
+      "subrace": null,
+      "class": "Magier"
     },
     {
       "name": "Karlach",
-      "fixedRace": "Tiefling",
-      "fixedSubrace": "Zariel",
-      "fixedClass": "Barbar",
-      "fixedBackground": "Ausgestoßene"
+      "fixed": true,
+      "race": "Tiefling",
+      "subrace": "Zariel-Tiefling",
+      "class": "Barbar"
     },
     {
       "name": "Lae'zel",
-      "fixedRace": "Githyanki",
-      "fixedSubrace": "Keine",
-      "fixedClass": "Kämpfer",
-      "fixedBackground": "Soldat"
+      "fixed": true,
+      "race": "Githyanki",
+      "subrace": null,
+      "class": "Kämpfer"
     },
     {
-      "name": "Shadowheart",
-      "fixedRace": "Halbelf",
-      "fixedSubrace": "Hochelf",
-      "fixedClass": "Kleriker",
-      "fixedBackground": "Akolyth"
+      "name": "Schattenherz",
+      "fixed": true,
+      "race": "Halb-Elf",
+      "subrace": "Hochelfen-Halb-Elf",
+      "class": "Kleriker"
     },
     {
       "name": "Wyll",
-      "fixedRace": "Mensch",
-      "fixedSubrace": "Keine",
-      "fixedClass": "Hexenmeister",
-      "fixedBackground": "Volksheld"
+      "fixed": true,
+      "race": "Mensch",
+      "subrace": null,
+      "class": "Hexenmeister"
     }
   ]
 }
