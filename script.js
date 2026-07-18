@@ -340,7 +340,12 @@ setTimeout(() => {
 },50);
 
     container.innerHTML = `
+    
+<div class="character-name">
 
+    ${player.name}
+
+</div>
 
        <div class="character-tags">
 
