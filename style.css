@@ -998,17 +998,15 @@ transform:scale(1);
 
 .character-name{
 
-text-align:center;
-
 font-family:"Cinzel",serif;
 
-font-size:2rem;
+font-size:2.2rem;
 
-color:var(--gold);
+color:var(--gold-light);
 
-letter-spacing:2px;
+text-shadow:
 
-margin-bottom:15px;
+0 0 15px rgba(198,165,91,.4);
 
 }
 /* =========================================================
