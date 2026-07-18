@@ -62,6 +62,7 @@ function random(array) {
     }
 
     return array[Math.floor(Math.random() * array.length)];
+    }
     
     function generateName(race){
 
@@ -77,8 +78,6 @@ function random(array) {
 
 
     return random(names);
-
-}
 
 }
 
