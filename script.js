@@ -473,6 +473,13 @@ function animateRoll() {
         document.querySelector("#rollStatus");
 
 
+    const button =
+        document.querySelector("#rollButton");
+
+
+    button.classList.add("rolling");
+
+
     status.innerHTML =
         "🎲 Dein Schicksal wird gewürfelt...";
 
@@ -491,6 +498,8 @@ function animateRoll() {
     setTimeout(() => {
 
         status.classList.remove("active");
+
+        button.classList.remove("rolling");
 
     },2500);
 
