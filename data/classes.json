@@ -5,7 +5,7 @@
       "subclasses": [
         "Pfad des Berserkers",
         "Pfad des Wilden Herzens",
-        "Pfad der Wilden Magie"
+        "Pfad der Wilden Magie",
         "Pfad der Riesen"
       ]
     },
@@ -14,7 +14,7 @@
       "subclasses": [
         "Schule des Wissens",
         "Schule des Mutes",
-        "Schule der Schwerter"
+        "Schule der Schwerter",
         "Schule des Zauberbanns"
       ]
     },
@@ -23,7 +23,7 @@
       "subclasses": [
         "Zirkel des Landes",
         "Zirkel des Mondes",
-        "Zirkel der Sporen"
+        "Zirkel der Sporen",
         "Zirkel der Sterne"
       ]
     },
@@ -32,7 +32,7 @@
       "subclasses": [
         "Der Unhold",
         "Der Große Alte",
-        "Die Erzfee"
+        "Die Erzfee",
         "Fluchklinge"
       ]
     },
@@ -41,7 +41,7 @@
       "subclasses": [
         "Champion",
         "Kampfmeister",
-        "Mystischer Ritter"
+        "Mystischer Ritter",
         "Arkaner Bogenschütze"
       ]
     },
@@ -54,7 +54,7 @@
         "Domäne des Wissens",
         "Domäne der Natur",
         "Domäne des Sturms",
-        "Domäne des Todes"
+        "Domäne des Todes",
         "Domäne des Krieges"
       ]
     },
@@ -67,8 +67,8 @@
         "Schule der Hervorrufung",
         "Schule der Illusion",
         "Schule der Nekromantie",
-        "Schule der Verzauberung"
-        "Schule der Transmutation"
+        "Schule der Verzauberung",
+        "Schule der Transmutation",
         "Klingengesang"
       ]
     },
@@ -77,7 +77,7 @@
       "subclasses": [
         "Weg der offenen Hand",
         "Weg der Schatten",
-        "Weg der vier Elemente"
+        "Weg der vier Elemente",
         "Weg des trunkenen Meisters"
       ]
     },
@@ -87,7 +87,7 @@
         "Schwur der Hingabe",
         "Schwur der Alten",
         "Schwur der Rache",
-        "Eidbrecher"
+        "Eidbrecher",
         "Schwur der Krone"
       ]
     },
@@ -96,7 +96,7 @@
       "subclasses": [
         "Dieb",
         "Assassine",
-        "Arkaner Betrüger"
+        "Arkaner Betrüger",
         "Haudegen"
       ]
     },
@@ -105,7 +105,7 @@
       "subclasses": [
         "Jäger",
         "Tierbändiger",
-        "Düsterpirscher"
+        "Düsterpirscher",
         "Schwarmhüter"
       ]
     },
@@ -114,7 +114,7 @@
       "subclasses": [
         "Drachenblutlinie",
         "Wilde Magie",
-        "Sturmmagie"
+        "Sturmmagie",
         "Schattenmagie"
       ]
     }
