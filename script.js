@@ -487,12 +487,12 @@ function animateRoll() {
     status.classList.add("active");
 
 
-    setTimeout(() => {
+setTimeout(() => {
 
-        status.innerHTML =
-            "✨ Dein Charakter steht fest";
+    status.innerHTML =
+        "✨ Dein Charakter steht fest";
 
-    },1200);
+},1800);
 
 
     setTimeout(() => {
