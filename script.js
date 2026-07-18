@@ -304,7 +304,6 @@ function renderSummary(player, container) {
     container.innerHTML = `
 <div class="character-name">
 
-    ${player.name}
 
 </div>
 
