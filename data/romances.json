@@ -1,12 +1,36 @@
 {
   "romances": [
-    "Astarion",
-    "Shadowheart",
-    "Lae'zel",
-    "Karlach",
-    "Gale",
-    "Wyll",
-    "Halsin",
-    "Minthara"
+    {
+      "name": "Astarion",
+      "genderRestriction": "none"
+    },
+    {
+      "name": "Shadowheart",
+      "genderRestriction": "none"
+    },
+    {
+      "name": "Lae'zel",
+      "genderRestriction": "none"
+    },
+    {
+      "name": "Karlach",
+      "genderRestriction": "none"
+    },
+    {
+      "name": "Gale",
+      "genderRestriction": "none"
+    },
+    {
+      "name": "Wyll",
+      "genderRestriction": "none"
+    },
+    {
+      "name": "Halsin",
+      "genderRestriction": "none"
+    },
+    {
+      "name": "Minthara",
+      "genderRestriction": "none"
+    }
   ]
 }
