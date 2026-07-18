@@ -307,7 +307,13 @@ function renderSummary(player, container) {
 }
 
 function renderPlayer(player, container) {
+container.parentElement.classList.remove("reveal");
 
+setTimeout(() => {
+
+    container.parentElement.classList.add("reveal");
+
+},50);
 
     container.innerHTML = `
 
