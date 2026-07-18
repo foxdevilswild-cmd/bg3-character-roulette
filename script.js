@@ -484,6 +484,17 @@ const playerTwo =
 
     );
 
+    renderSummary(
+    playerOne,
+    document.querySelector("#summary1")
+);
+
+
+renderSummary(
+    playerTwo,
+    document.querySelector("#summary2")
+);
+
 
 }
 
