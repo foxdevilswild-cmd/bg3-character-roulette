@@ -883,3 +883,23 @@ color:var(--gold);
 margin-bottom:25px;
 
 }
+/* =========================================================
+   SUBCLASS TITLE
+========================================================= */
+
+
+.subclass-title{
+
+text-align:center;
+
+font-family:"Cinzel",serif;
+
+font-size:1.35rem;
+
+color:var(--gold);
+
+letter-spacing:1px;
+
+margin-bottom:25px;
+
+}
