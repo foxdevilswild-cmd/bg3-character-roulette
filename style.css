@@ -345,6 +345,7 @@ box-shadow .25s,
 border-color .25s;
 
 position:relative;
+   overflow:hidden;
 
 }
 
@@ -624,9 +625,6 @@ width:100%;
 border-radius:8px;
 
 }
-
-}
-
 
 
 /* =========================
