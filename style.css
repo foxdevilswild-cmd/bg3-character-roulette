@@ -1137,8 +1137,10 @@ text-shadow:
 
 0 0 10px rgba(198,165,91,.35),
 0 0 22px rgba(198,165,91,.15);
+   
+animation:
 
-}
+goldGlow 4s ease-in-out infinite;
 
 }
 /* =========================================================
@@ -1206,5 +1208,25 @@ transparent,
 rgba(198,165,91,.75),
 transparent
 );
+@keyframes goldGlow{
+
+0%{
+
+text-shadow:
+0 0 8px rgba(198,165,91,.25);
+
+}
+
+50%{
+
+text-shadow:
+0 0 22px rgba(198,165,91,.65);
+
+}
+
+100%{
+
+text-shadow:
+0 0 8px rgba(198,165,91,.25);
 
 }
