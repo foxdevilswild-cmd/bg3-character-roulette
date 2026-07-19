@@ -66,7 +66,7 @@ function random(array) {
     
 function generateName(race, gender) {
 
-    const raceNames = data.names.names[race];
+    const raceNames = data.names[race];
     if (!raceNames) {
         return "Unbekannt";
     }
