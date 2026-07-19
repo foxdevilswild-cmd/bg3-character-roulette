@@ -84,9 +84,9 @@
     {
       "name": "Paladin",
       "subclasses": [
-        "Schwur der Hingabe",
-        "Schwur der Alten",
-        "Schwur der Rache",
+        "Eid der Hingabe",
+        "Eid der Ahnen",
+        "Eid der Vergeltung",
         "Eidbrecher",
         "Schwur der Krone"
       ]
