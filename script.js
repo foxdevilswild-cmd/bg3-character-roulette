@@ -64,23 +64,24 @@ function random(array) {
     return array[Math.floor(Math.random() * array.length)];
     }
     
-    function generateName(race){
+function generateName(race, gender) {
 
-    const names =
-        data.names[race];
+    const raceNames = data.names[race];
 
-
-    if(!names){
-
+    if (!raceNames) {
         return "Unbekannt";
-
     }
 
+    if (gender === "Männlich") {
+        return random(raceNames.male);
+    }
 
-    return random(names);
+    if (gender === "Weiblich") {
+        return random(raceNames.female);
+    }
 
+    return "Unbekannt";
 }
-
 
 
 
