@@ -285,10 +285,11 @@ name:
         generateRomance(usedRomances),
 
 
-    appearance:
-        generateAppearance(race.race)
-
-};
+   player.name =
+    generateName(
+        player.race,
+        player.appearance.gender
+    );
 
 
 
