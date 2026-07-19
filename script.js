@@ -80,7 +80,11 @@ function generateName(race, gender) {
         return random(raceNames.female);
     }
 
-    return "Unbekannt";
+    // Nicht-binär oder unbekannt
+    return random([
+        ...raceNames.male,
+        ...raceNames.female
+    ]);
 }
 
 
