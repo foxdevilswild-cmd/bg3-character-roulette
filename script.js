@@ -254,52 +254,46 @@ const name =
 
 
 
-   const player = {
+const player = {
 
     origin:
         origin.name,
-name:
-    name,
 
     race:
         race.race,
 
-       
     subrace:
         race.subrace,
-
 
     class:
         characterClass.class,
 
-
     subclass:
         characterClass.subclass,
-
 
     background:
         random(data.backgrounds.backgrounds),
 
-
     romance:
         generateRomance(usedRomances),
 
+    appearance:
+        generateAppearance(race.race)
 
-   player.Name =
+};
+
+player.name =
     generateName(
         player.race,
         player.appearance.gender
     );
 
-
-
 player.description =
     generateDescription(player);
 
-    return player;
+return player;
 
 }
-
 function renderSummary(player, container) {
 
 
