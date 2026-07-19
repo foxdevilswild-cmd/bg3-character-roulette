@@ -347,6 +347,8 @@ border-color .25s;
 position:relative;
    overflow:hidden;
 
+      }
+
    .character-card::before,
 .character-card::after{
 
@@ -420,6 +422,7 @@ inset 0 1px 0 rgba(255,255,255,.08),
 
 0 1px 8px rgba(0,0,0,.25);
 
+position:relative;
 }
 
 .card-header h3{
@@ -668,7 +671,7 @@ border-radius:8px;
 
 }
 
-
+}
 /* =========================
    DETAILS
 ========================= */
@@ -865,16 +868,6 @@ color:rgba(229,211,160,.55);
 margin-left:18px;
 
 }
-background:
-linear-gradient(
-180deg,
-#352d25,
-#231d18
-);
-box-shadow:
-
-0 25px 60px rgba(0,0,0,.60),
-inset 0 1px 0 rgba(255,255,255,.04);
 
 /* =========================================================
    ROMANZE
@@ -1202,7 +1195,6 @@ right:40px;
 bottom:0;
 
 height:1px;
-   position:relative;
 
 background:
 
@@ -1212,6 +1204,8 @@ transparent,
 rgba(198,165,91,.75),
 transparent
 );
+   }
+
 @keyframes goldGlow{
 
 0%{
