@@ -383,14 +383,18 @@ border-top:none;
 
 .character-card:hover{
 
-transform:translateY(-8px);
+transform:
+
+translateY(-8px)
+scale(1.01);
 
 border-color:var(--gold);
 
 box-shadow:
 
-0 30px 60px rgba(0,0,0,.70),
-0 0 20px rgba(198,165,91,.12);
+0 35px 65px rgba(0,0,0,.60),
+
+0 0 18px rgba(198,165,91,.18);
 
 }
 
