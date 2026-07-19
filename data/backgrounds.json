@@ -1,16 +1,15 @@
 {
   "backgrounds": [
     "Akolyth",
-    "Handwerker der Gilde",
-    "Hochstapler",
-    "Kriminell",
-    "Edelmann",
-    "Einsiedler",
-    "Gelehrter",
-    "Outlander",
-    "Straßenkind",
-    "Unterhalter",
+    "Scharlatan",
+    "Krimineller",
+    "Unterhaltungskünstler",
     "Volksheld",
-    "Soldat"
+    "Gildenkünstler",
+    "Adliger",
+    "Sonderling",
+    "Weiser",
+    "Soldat",
+    "Straßenkind"
   ]
 }
