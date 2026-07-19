@@ -368,10 +368,11 @@ padding:22px;
 text-align:center;
 
 background:
+
 linear-gradient(
 180deg,
-rgba(198,165,91,.16),
-rgba(198,165,91,.05)
+rgba(198,165,91,.22),
+rgba(198,165,91,.10)
 );
 
 border-bottom:1px solid rgba(198,165,91,.20);
