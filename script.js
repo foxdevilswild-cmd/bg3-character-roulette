@@ -285,7 +285,7 @@ name:
         generateRomance(usedRomances),
 
 
-   player.name =
+   player.Name =
     generateName(
         player.race,
         player.appearance.gender
