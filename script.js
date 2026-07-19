@@ -249,9 +249,6 @@ function generatePlayer(usedRomances = []) {
 
     const race =
         generateRace();
-
-const name =
-    generateName(race.race);
     
     const characterClass =
         generateClass();
