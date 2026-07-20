@@ -286,6 +286,8 @@ player.name =
     generateName(
         player.race,
         player.appearance.gender
+        const raceKey = race.replace("-", "");
+const raceNames = data.names[raceKey];
     );
 
 player.description =
