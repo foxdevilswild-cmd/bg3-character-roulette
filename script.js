@@ -66,7 +66,10 @@ function random(array) {
     
 function generateName(race, gender) {
 
-    const raceNames = data.names[race];
+    const raceKey = race.replace("-", "");
+
+    const raceNames = data.names[raceKey];
+
     if (!raceNames) {
         return "Unbekannt";
     }
@@ -79,14 +82,12 @@ function generateName(race, gender) {
         return random(raceNames.female);
     }
 
-    // Nicht-binär oder unbekannt
     return random([
         ...raceNames.male,
         ...raceNames.female
     ]);
+
 }
-
-
 
 function generateRace() {
 
