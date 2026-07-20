@@ -66,11 +66,15 @@ function random(array) {
     
 function generateName(race, gender) {
 
-    const raceKey = race.replace("-", "");
+    // Rassenname an names.json anpassen
+    const raceKey = race
+        .replace(/-/g, "")
+        .replace(/\s/g, "");
 
     const raceNames = data.names[raceKey];
 
     if (!raceNames) {
+        console.warn("Keine Namen gefunden für:", raceKey);
         return "Unbekannt";
     }
 
@@ -82,6 +86,7 @@ function generateName(race, gender) {
         return random(raceNames.female);
     }
 
+    // Nichtbinär = männliche + weibliche Namen
     return random([
         ...raceNames.male,
         ...raceNames.female
