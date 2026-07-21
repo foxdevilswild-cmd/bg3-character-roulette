@@ -25,33 +25,33 @@
   "faces": {
 
   "Mensch": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9","Gesicht 10"]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9","Gesicht 10"]
   },
 
   "Elf": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
   },
 
   "Drow": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
   },
 
-  "Halb-Elf": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
+  "Halbelf": {
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
   },
 
   "Tiefling": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
   "Githyanki": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
   },
 
   "Zwerg": {
@@ -60,28 +60,28 @@
   },
 
   "Halbling": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
   "Gnom": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
-  "Halb-Ork": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+  "Halbork": {
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
       "Drachenblütiger": {
-    "male": [
+    "männlich": [
       "Gesicht 1",
       "Gesicht 2",
       "Gesicht 3",
       "Gesicht 4"
     ],
-    "female": [
+    "weiblich": [
       "Gesicht 1",
       "Gesicht 2",
       "Gesicht 3",
