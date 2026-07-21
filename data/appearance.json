@@ -74,10 +74,11 @@
     "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
-  "Drachenblütiger": {
-    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"],
-    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"]
+    "Drachenblütiger": {
+     "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"],
+     "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"]
    }
+  },
 
   "hairstyles": [
     "Frisur 1",
