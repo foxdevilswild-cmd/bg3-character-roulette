@@ -190,11 +190,11 @@ function generateAppearance(race) {
             random(data.appearance.hairstyles),
 
 horns:
+    horns:
+    data.appearance.horns &&
     data.appearance.horns[race]
-    ?
-    random(data.appearance.horns[race])
-    :
-    "Keine",
+        ? random(data.appearance.horns[race])
+        : "Keine",
         
         hairColor:
             raceData
