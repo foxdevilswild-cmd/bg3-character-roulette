@@ -465,6 +465,20 @@ ${player.subclass}
             <span class="value">${player.appearance.hairstyle}</span>
         </div>
 
+        ${
+    player.race === "Tiefling" ||
+    player.race === "Drachenblütiger"
+    ?
+    `
+    <div class="attribute">
+        <span class="label">Hörner</span>
+        <span class="value">${player.appearance.horns}</span>
+    </div>
+    `
+    :
+    ""
+}
+
 
         <div class="attribute">
             <span class="label">Haarfarbe</span>
