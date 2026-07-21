@@ -299,7 +299,7 @@ const player = {
         random(data.backgrounds.backgrounds),
 
     romance:
-        generateRomance(usedRomances, playerName)
+        generateRomance(usedRomances, playerName),
 
     appearance:
         generateAppearance(race.race)
