@@ -93,6 +93,33 @@
   "Frisur 10"
 ],
 
+  "horns": {
+
+  "Tiefling": [
+    "Keine",
+    "Gebogene Hörner",
+    "Lange geschwungene Hörner",
+    "Kurze Hörner",
+    "Gerade Hörner",
+    "Asymmetrische Hörner",
+    "Spiralhörner",
+    "Widderhörner",
+    "Doppelte Hörner"
+  ],
+
+  "Drachenblütiger": [
+    "Keine",
+    "Kurze Drachenhörner",
+    "Lange nach hinten gebogene Hörner",
+    "Seitliche Hörner",
+    "Gebogene Stierhörner",
+    "Spitze Kronenhörner",
+    "Mehrfach verzweigte Hörner",
+    "Massive Drachenhörner"
+  ]
+
+},
+
   "raceAppearance": {
 
     "Mensch": {
