@@ -66,13 +66,7 @@ function random(array) {
     
 function generateName(race, gender) {
 
-    const raceKey = race.replace(/-/g, "").replace(/\s/g, "");
-
-    console.log("Rasse:", race);
-    console.log("RaceKey:", raceKey);
-    console.log("Vorhandene Keys:", Object.keys(data.names));
-
-    const raceNames = data.names[raceKey];
+    const raceNames = data.names[race];
 
     if (!raceNames) {
         return "Unbekannt";
@@ -82,14 +76,7 @@ function generateName(race, gender) {
         return random(raceNames.male);
     }
 
-    if (gender === "Weiblich") {
-        return random(raceNames.female);
-    }
-
-    return random([
-        ...raceNames.male,
-        ...raceNames.female
-    ]);
+    return random(raceNames.female);
 }
 
 function generateRace() {
