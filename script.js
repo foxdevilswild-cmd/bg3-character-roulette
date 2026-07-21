@@ -225,7 +225,6 @@ function generateAppearance(race) {
 
 }
 
-}
 function generateDescription(player) {
 
     const raceDescriptions =
