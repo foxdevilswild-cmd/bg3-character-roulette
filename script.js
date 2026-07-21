@@ -149,8 +149,8 @@ function generateAppearance(race) {
 
     const genderKey =
         gender === "Männlich"
-        ? "männlich"
-        : "weiblich";
+        ? "male"
+        : "female";
 
 
     const raceData =
