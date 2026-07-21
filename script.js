@@ -138,14 +138,28 @@ function generateClass() {
 
 function generateAppearance(race) {
 
+
+    const gender =
+        random(data.appearance.gender);
+
+
+    const raceFaceData =
+        data.appearance.faces[race];
+
+
+    const genderKey =
+        gender === "Männlich"
+        ? "männlich"
+        : "weiblich";
+
+
     const raceData =
         data.appearance.raceAppearance[race];
 
 
     return {
 
-        gender:
-            random(data.appearance.gender),
+        gender: gender,
 
 
         bodyType:
@@ -157,7 +171,11 @@ function generateAppearance(race) {
 
 
         face:
-            random(data.appearance.faces),
+            raceFaceData
+            ?
+            random(raceFaceData[genderKey])
+            :
+            "Beliebig",
 
 
         hairstyle:
@@ -204,6 +222,8 @@ function generateAppearance(race) {
             random(data.appearance.makeup)
 
     };
+
+}
 
 }
 function generateDescription(player) {
