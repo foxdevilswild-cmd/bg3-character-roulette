@@ -261,7 +261,7 @@ function generateDescription(player) {
 
 
 
-function generatePlayer(usedRomances = []) {
+function generatePlayer(playerName, usedRomances = []) {
 
 
     const origin =
@@ -297,7 +297,7 @@ const player = {
         random(data.backgrounds.backgrounds),
 
     romance:
-        generateRomance(usedRomances),
+        generateRomance(usedRomances, playerName)
 
     appearance:
         generateAppearance(race.race)
@@ -565,23 +565,14 @@ function roll() {
         const usedRomances = [];
 
 
-        const playerOne =
-            generatePlayer(usedRomances);
-
-
-        playerOne.playerName = "Anni";
-
-
+       const playerOne =
+    generatePlayer("Anni", usedRomances);
+     
         usedRomances.push(playerOne.romance);
 
 
-        const playerTwo =
-            generatePlayer(usedRomances);
-
-
-        playerTwo.playerName = "Jenny";
-
-
+       const playerTwo =
+    generatePlayer("Jenny", usedRomances);
 
         renderPlayer(
 
