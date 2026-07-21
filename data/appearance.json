@@ -75,18 +75,8 @@
   },
 
       "Drachenblütiger": {
-    "männlich": [
-      "Gesicht 1",
-      "Gesicht 2",
-      "Gesicht 3",
-      "Gesicht 4"
-    ],
-    "weiblich": [
-      "Gesicht 1",
-      "Gesicht 2",
-      "Gesicht 3",
-      "Gesicht 4"
-    ]
+    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"],
+    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"]
   }
 },
 
