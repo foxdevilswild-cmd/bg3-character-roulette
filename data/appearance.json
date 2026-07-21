@@ -25,33 +25,33 @@
   "faces": {
 
   "Mensch": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9","Gesicht 10"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9","Gesicht 10"]
   },
 
   "Elf": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
   },
 
   "Drow": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8"]
   },
 
   "Halbelf": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
   },
 
   "Tiefling": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
   "Githyanki": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7","Gesicht 8","Gesicht 9"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6","Gesicht 7"]
   },
 
   "Zwerg": {
@@ -60,23 +60,23 @@
   },
 
   "Halbling": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
   "Gnom": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
   "Halbork": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4","Gesicht 5","Gesicht 6"]
   },
 
       "Drachenblütiger": {
-    "männlich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"],
-    "weiblich": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"]
+    "male": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"],
+    "female": ["Gesicht 1","Gesicht 2","Gesicht 3","Gesicht 4"]
   }
 },
 
@@ -166,7 +166,7 @@
     },
 
 
-    "Halb-Elf": {
+    "Halbelf": {
       "skinColors": [
         "Sehr hell",
         "Hell",
@@ -277,7 +277,7 @@
     },
 
 
-    "Halb-Ork": {
+    "Halbork": {
       "skinColors":[
 "Hellgrün",
 "Olivgrün",
