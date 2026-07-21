@@ -564,16 +564,14 @@ function roll() {
     setTimeout(() => {
 
 
-        const usedRomances = [];
+       const usedRomances = [];
 
-
-       const playerOne =
+const playerOne =
     generatePlayer("Anni", usedRomances);
-     
-        usedRomances.push(playerOne.romance);
 
+usedRomances.push(playerOne.romance);
 
-       const playerTwo =
+const playerTwo =
     generatePlayer("Jenny", usedRomances);
 
         renderPlayer(
