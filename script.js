@@ -104,16 +104,22 @@ function generateRace() {
 }
 
 
-function generateRomance(usedRomances = []) {
+function generateRomance(usedRomances = [], playerName = "") {
 
-    const availableRomances =
+    let availableRomances =
         data.romances.romances.filter(
             romance => !usedRomances.includes(romance)
         );
 
+    // Anni darf keinen Astarion bekommen 😉
+    if (playerName === "Anni") {
+        availableRomances =
+            availableRomances.filter(
+                romance => romance !== "Astarion"
+            );
+    }
 
     return random(availableRomances);
-
 }
 
 function generateClass() {
