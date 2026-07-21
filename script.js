@@ -168,8 +168,10 @@ function generateAppearance(race) {
         gender: gender,
 
 
-        bodyType:
-            random(data.appearance.bodyTypes),
+     bodyType:
+    gender === "Weiblich"
+        ? random(["Körpertyp 1", "Körpertyp 3"])
+        : random(["Körpertyp 2", "Körpertyp 4"]),
 
 
         voice:
