@@ -147,16 +147,20 @@
 
 
     "Drow": {
-      "skinColors": [
-        "Violett",
-        "Blaugrau",
-        "Dunkelgrau"
-      ],
-      "eyeColors": [
-        "Rot",
-        "Silber",
-        "Violett"
-      ],
+      "skinColors":[
+"Aschgrau",
+"Schiefergrau",
+"Blaugrau",
+"Dunkelgrau",
+"Violettgrau"
+],
+      "eyeColors":[
+"Rot",
+"Pink",
+"Violett",
+"Hellblau",
+"Silber"
+],
       "hairColors": [
         "Weiß",
         "Silber",
@@ -189,18 +193,22 @@
 
 
     "Tiefling": {
-      "skinColors": [
-        "Rot",
-        "Violett",
-        "Dunkelrot",
-        "Bläulich"
-      ],
-      "eyeColors": [
-        "Gold",
-        "Rot",
-        "Silber",
-        "Schwarz"
-      ],
+      "skinColors":[
+"Rot",
+"Dunkelrot",
+"Purpur",
+"Violett",
+"Blau",
+"Dunkelblau",
+"Grau",
+"Schwarz"
+],
+      "eyeColors":[
+"Gold",
+"Orange",
+"Rot",
+"Schwarz"
+],
       "hairColors": [
         "Schwarz",
         "Rot",
@@ -273,16 +281,20 @@
 
 
     "Halb-Ork": {
-      "skinColors": [
-        "Grünlich",
-        "Grau",
-        "Braun"
-      ],
-      "eyeColors": [
-        "Braun",
-        "Dunkel",
-        "Rot"
-      ],
+      "skinColors":[
+"Hellgrün",
+"Olivgrün",
+"Graugrün",
+"Dunkelgrün",
+"Moosgrün",
+"Gelbgrün"
+],
+      "eyeColors":[
+"Gelb",
+"Braun",
+"Rot",
+"Bernstein"
+],
       "hairColors": [
         "Schwarz",
         "Braun",
@@ -292,16 +304,17 @@
 
 
     "Githyanki": {
-      "skinColors": [
-        "Gold",
-        "Grünlich",
-        "Gelblich"
-      ],
-      "eyeColors": [
-        "Schwarz",
-        "Gold",
-        "Silber"
-      ],
+      "skinColors":[
+"Ocker",
+"Gelb",
+"Sandfarben",
+"Olivgelb"
+],
+      "eyeColors":[
+"Gelb",
+"Gold",
+"Grün"
+],
       "hairColors": [
         "Schwarz",
         "Braun",
@@ -312,21 +325,23 @@
 
 
     "Drachenblütiger": {
-      "skinColors": [
-        "Rot",
-        "Blau",
-        "Schwarz",
-        "Gold",
-        "Silber",
-        "Grün",
-        "Weiß"
-      ],
-      "eyeColors": [
-        "Gold",
-        "Silber",
-        "Rot",
-        "Blau"
-      ],
+     "skinColors":[
+"Rot",
+"Blau",
+"Grün",
+"Bronze",
+"Kupfer",
+"Gold",
+"Silber",
+"Weiß",
+"Schwarz"
+],
+     "eyeColors":[
+"Gold",
+"Silber",
+"Rot",
+"Bernstein"
+],
       "hairColors": [
         "Schwarz",
         "Weiß",
