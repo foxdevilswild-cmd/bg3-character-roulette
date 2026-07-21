@@ -21,9 +21,9 @@
     {
       "name": "Halbelf",
       "subraces": [
-        "Hochelfen-Halb-Elf",
-        "Waldelfen-Halb-Elf",
-        "Drow-Halb-Elf"
+        "Hochelfen-Halbelf",
+        "Waldelfen-Halbelf",
+        "Drow-Halbelf"
       ]
     },
     {
