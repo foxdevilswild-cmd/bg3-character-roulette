@@ -194,7 +194,8 @@ horns:
     data.appearance.horns &&
     data.appearance.horns[race]
         ? random(data.appearance.horns[race])
-        : "Keine",
+        : 
+        "Keine",
         
         hairColor:
             raceData
@@ -202,7 +203,6 @@ horns:
             random(raceData.hairColors)
             :
             "Beliebig",
-
 
         eyeColor:
             raceData
