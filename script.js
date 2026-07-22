@@ -630,7 +630,27 @@ async function init() {
 
 
 }
+const intro =
+    document.querySelector("#intro");
 
+const app =
+    document.querySelector("#app");
+
+document
+    .querySelector("#startButton")
+    .addEventListener("click", () => {
+
+        intro.style.opacity = "0";
+
+        setTimeout(() => {
+
+            intro.style.display = "none";
+
+            app.classList.add("visible");
+
+        },1000);
+
+    });
 
 
 init();
